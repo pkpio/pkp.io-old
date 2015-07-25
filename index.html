@@ -1,0 +1,88 @@
+<html lang="en" ng-app="StarterApp">
+
+<head>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="initial-scale=1" />
+</head>
+
+<body layout="column" ng-controller="AppCtrl">
+  <md-toolbar layout="row">
+    <div class="md-toolbar-tools">
+      <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+        <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+      </md-button>
+      <h1>Hello World</h1>
+    </div>
+  </md-toolbar>
+  <div layout="row" flex>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+
+    </md-sidenav>
+    <div layout="column" flex id="content">
+      <md-content layout="column" flex class="md-padding">
+
+<div ng-controller="DemoCtrl" ng-cloak="" layout="column" layout-margin="" class="demo" ng-app="MyApp">
+<md-tabs md-dynamic-height="false">
+  <md-tab>
+    <md-tab-label>
+      <md-icon md-svg-icon="img/laundry.svg"></md-icon>
+      <div>Cake</div>
+    </md-tab-label>
+    <md-tab-body>
+      <p class="md-padding">
+        Lorem
+      </p>
+    </md-tab-body>
+  </md-tab>
+  <md-tab>
+    <md-tab-label>
+      <md-icon md-svg-icon="img/library.svg"></md-icon>
+      <div>Cart</div>
+    </md-tab-label>
+    <md-tab-body>
+      <p class="md-padding">
+        Ipsum
+      </p>
+    </md-tab-body>
+  </md-tab>
+  <md-tab>
+    <md-tab-label>
+      <md-icon md-svg-icon="img/hotel.svg"></md-icon>
+      <div>File</div>
+    </md-tab-label>
+    <md-tab-body>
+      <p class="md-padding">
+        Foobar
+      </p>
+    </md-tab-body>
+  </md-tab>
+</md-tabs>
+
+      </md-content>
+    </div>
+  </div>
+
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+  
+  <!-- Angular app setup -->
+  <script type="text/javascript">
+    var app = angular.module('StarterApp', ['ngMaterial']);
+
+app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+  $scope.toggleSidenav = function(menuId) {
+    $mdSidenav(menuId).toggle();
+  };
+ 
+}]);
+  </script>
+
+</body>
+
+</html>

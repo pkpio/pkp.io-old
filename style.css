@@ -1,0 +1,18 @@
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+.demo md-icon {
+  margin: 20px;
+  margin-top: 0;
+  width: 24px;
+  height: 24px;
+}
+.md-tab > md-icon {
+  margin-bottom: 5px;
+}
+md-pagination-wrapper, md-tabs-canvas {
+  height: 72px;
+}
