@@ -23,41 +23,41 @@
     <div layout="column" flex id="content">
       <md-content layout="column" flex class="md-padding">
 
-<md-tabs md-dynamic-height="false">
-  <md-tab>
-    <md-tab-label>
-      <md-icon md-svg-icon="img/laundry.svg"></md-icon>
-      <div>Cake</div>
-    </md-tab-label>
-    <md-tab-body>
-      <p class="md-padding">
-        Lorem
-      </p>
-    </md-tab-body>
-  </md-tab>
-  <md-tab>
-    <md-tab-label>
-      <md-icon md-svg-icon="img/library.svg"></md-icon>
-      <div>Cart</div>
-    </md-tab-label>
-    <md-tab-body>
-      <p class="md-padding">
-        Ipsum
-      </p>
-    </md-tab-body>
-  </md-tab>
-  <md-tab>
-    <md-tab-label>
-      <md-icon md-svg-icon="img/hotel.svg"></md-icon>
-      <div>File</div>
-    </md-tab-label>
-    <md-tab-body>
-      <p class="md-padding">
-        Foobar
-      </p>
-    </md-tab-body>
-  </md-tab>
-</md-tabs>
+        <md-tabs md-dynamic-height="false">
+          <md-tab>
+            <md-tab-label>
+              <md-icon md-svg-icon="img/laundry.svg"></md-icon>
+              <div>Cake</div>
+            </md-tab-label>
+            <md-tab-body>
+              <p class="md-padding">
+                Lorem
+              </p>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-icon md-svg-icon="img/library.svg"></md-icon>
+              <div>Cart</div>
+            </md-tab-label>
+            <md-tab-body>
+              <p class="md-padding">
+                Ipsum
+              </p>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-icon md-svg-icon="img/hotel.svg"></md-icon>
+              <div>File</div>
+            </md-tab-label>
+            <md-tab-body>
+              <p class="md-padding">
+                Foobar
+              </p>
+            </md-tab-body>
+          </md-tab>
+        </md-tabs>
 
       </md-content>
     </div>
@@ -73,13 +73,11 @@
   <!-- Angular app setup -->
   <script type="text/javascript">
     var app = angular.module('StarterApp', ['ngMaterial']);
-
-app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
-  $scope.toggleSidenav = function(menuId) {
-    $mdSidenav(menuId).toggle();
-  };
- 
-}]);
+    app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+      $scope.toggleSidenav = function(menuId) {
+        $mdSidenav(menuId).toggle();
+      };
+    }]);
   </script>
 
 </body>
