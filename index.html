@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PraveenApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+
+    <!-- CSS libs -->
+    <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css"/>
+
+    <meta name="viewport" content="initial-scale=1" />
+    <title>Praveen</title>
+</head>
+<body ng-controller="AppCtrl">
+
+<!-- Title -->
+<md-toolbar ng-controller="ToolbarCtrl">
+    <div class="md-toolbar-tools" layout="row" flex>
+        <h3 flex>Praveen Kumar Pendyala</h3>
+    </div>
+    <div class="md-toolbar-tools" layout="row">
+        <md-button><a href="#/about">About</a></md-button>
+        <md-button><a href="#/study">Education</a></md-button>
+        <md-button><a href="#/work">Work</a></md-button>
+        <md-button><a href="#/project">Project</a></md-button>
+    </div>
+</md-toolbar>
+
+<!-- Content -->
+<div>
+    <md-content class="md-padding">
+        <div ng-view></div>
+    </md-content>
+</div>
+
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+<!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
+
+<!-- JS -->
+<script src="js/app.js"></script>
+<script src="js/work.js"></script>
+</body>
+</html>
