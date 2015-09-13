@@ -48,8 +48,8 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) 
         },
         {
             class: "fa-graduation-cap",
-            text: "Education",
-            url: "/education"
+            text: "Academics",
+            url: "/academics"
         },
         {
             class: "fa-coffee",
@@ -67,20 +67,5 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) 
             url: "/random"
         },
     ];
-
-    $scope.navOpen = false;
-    $scope.navToggle = angular.element( document.querySelector('#nav-toggle'));
-
-    $scope.toggle = function() {
-        if ($scope.navOpen == true) {
-            $scope.navToggle.removeClass('active');
-            $scope.navOpen = false;
-            $mdSidenav('left').close();
-        } else {
-            $scope.navToggle.addClass('active');
-            $scope.navOpen = true;
-            $mdSidenav('left').open();
-        }
-    };
 
 });
