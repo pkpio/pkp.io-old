@@ -1,0 +1,28 @@
+{
+  "name": "Praveen's site",
+  "version": "0.1",
+  "homepage": "https://github.com/praveendath92/pkp.io",
+  "authors": [
+    "Praveen Kumar Pendyala <praveendath92@gmail.com>"
+  ],
+  "description": "Personal webpage of Praveen Kumar Pendyala",
+  "main": "index.html",
+  "keywords": [
+    "Personal",
+    "Webpage",
+    "Praveen",
+    "Kumar",
+    "Pendyala"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-timeline": "~1.5.2"
+  }
+}
