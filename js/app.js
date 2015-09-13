@@ -2,7 +2,7 @@
  * Created by praveen on 12.09.15.
  */
 
-angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline']);
+angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite']);
 
 // Theme setup
 angular.module('PraveenApp').config(function($mdThemingProvider) {
@@ -31,8 +31,8 @@ angular.module('PraveenApp').config(function($routeProvider) {
             controller  : 'ProjectCtrl'
         })
         .when('/',{
-            templateUrl : 'view/about.html',
-            controller  : 'WorkCtrl'
+            templateUrl : 'view/introduction.html',
+            controller  : 'IntroCtrl'
         })
         .otherwise({
             redirectTo: '/'
@@ -65,7 +65,7 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) 
             class: "fa-lightbulb-o",
             text: "Random thoughts",
             url: "/random"
-        },
+        }
     ];
 
 });

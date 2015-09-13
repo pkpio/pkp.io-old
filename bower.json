@@ -24,5 +24,8 @@
   ],
   "dependencies": {
     "angular-timeline": "~1.5.2"
+  },
+  "resolutions": {
+    "angular": "~1.2.0"
   }
 }

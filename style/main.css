@@ -1,3 +1,9 @@
+.intro-msg{
+    color: grey;
+}
+body{
+    color: #0077b3;
+}
 #profile{
     width: 100%;
     min-width: 200px;

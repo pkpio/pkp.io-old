@@ -7,6 +7,7 @@
 
     <!-- CSS libs -->
     <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css"/>
+    <link rel="stylesheet" href="bower_components/angular-typewrite/dist/angular-typewrite.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/main.css"/>
@@ -53,12 +54,18 @@
         </md-sidenav>
 
         <!-- Content -->
-        <md-content flex>
-            <div>
-                <md-content class="md-padding">
-                    <div ng-view></div>
-                </md-content>
-            </div>
+        <md-content flex layout="column" flex layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools" layout="column" layout-align="center center">
+                    <p>
+                        <i class="fa fa-pinterest-square"></i>
+                        <i class="fa fa-xing"></i>
+                        <i class="fa fa-pinterest-square"></i>
+                    </p>
+                </div>
+            </md-toolbar>
+
+            <div ng-view></div>
         </md-content>
     </section>
 
@@ -73,9 +80,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
+<script src="js/libs/angular-typewriter.js"></script>
 
 <!-- JS -->
 <script src="js/app.js"></script>
+<script src="js/introduction.js"></script>
 <script src="js/work.js"></script>
 </body>
 </html>

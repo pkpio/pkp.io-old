@@ -1,0 +1,11 @@
+<div flex layout-padding layout="column" layout-align="center center">
+    <span ng-repeat="msg in messages" class="intro-msg">
+        <p typewrite
+           type-delay="{{ params.typeDelay }}"
+           blink-cursor="{{ getBlinking($index) }}"
+           blink-delay="{{ params.blinkDelay }}"
+           text="{{ msg }}"
+           initial-delay = "{{ getInitialDelay($index) }}"
+           cursor="<i class='fa fa-i-cursor'></i>"></p>
+    </span>
+</div>
