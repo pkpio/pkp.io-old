@@ -15,32 +15,43 @@
 </head>
 <body ng-controller="AppCtrl">
 
-<section flex>
+<section flex class="full-height">
 
     <!-- Navigation toggle -->
     <nav ng-click="toggle()">
         <a id="nav-toggle"><span></span></a>
     </nav>
 
-    <section flex layout="row">
+    <section flex layout="row" class="full-height">
 
         <!-- Navigation menu -->
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="navOpen">
-            <md-content flex layout="column" id="profile" >
+
+            <div flex layout="column" id="profile">
                 <div flex layout="column" layout-padding layout-align="center center">
                     <img class="circular" src="img/praveen.jpg"/>
                 </div>
-                <div layout="column" layout-align="start center">
+                <div flex layout="column" layout-align="start center">
                     <p id="profile-name">Praveen Kumar Pendyala</p>
                 </div>
-                <div layout="row" layout-align="center center" layout-padding>
+                <div flex layout="row" layout-align="center center" layout-padding>
                     <a class="fa fa-lg profile-icon fa-facebook-official" href="https://www.facebook.com/pamarru"></a>
                     <a class="fa fa-lg profile-icon fa-linkedin" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
                     <a class="fa fa-lg profile-icon fa-github" href="https://github.com/praveendath92"></a>
                     <a class="fa fa-lg profile-icon fa-envelope" href="mailto:m@praveen.xyz"></a>
                 </div>
+            </div>
 
-            </md-content>
+            <div layout="column" flex ng-repeat="item in menuItems">
+                <md-button class="menu-item" href="#{{ item.url }}">
+                    <span layout="row" layout-align="start center">
+                        <i class="fa fa-lg {{ item.class }} menu-icon"></i>{{ item.text }}
+                    </span>
+                </md-button>
+            </div>
+
+            <div flex></div>
+
         </md-sidenav>
 
         <!-- Content -->

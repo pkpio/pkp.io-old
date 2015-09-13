@@ -1,6 +1,5 @@
 #profile{
     width: 100%;
-    min-height: 200px;
     min-width: 200px;
     background-color: #0077b3;
 }
@@ -12,8 +11,21 @@
 .profile-icon{
     color: whitesmoke;
     cursor: pointer;
-    margin: 5px 20px;
+    margin: 8px 20px;
     text-decoration: none;
+}
+.menu-icon{
+    margin: 0px;
+    padding: 5px 20px 5px 20px;
+    width: 70px;
+}
+.menu-item{
+    margin: 0px;
+    padding: 8px 20px 8px 8px;
+    color: grey;
+}
+.full-height{
+    height: 100%;
 }
 .circular {
     width: 180px;
@@ -48,7 +60,7 @@ nav {
     border-radius: 1px;
     height: 2px;
     width: 35px;
-    background: #0077b3;
+    background: deeppink;
     position: absolute;
     left: 0;
     top: 50%;

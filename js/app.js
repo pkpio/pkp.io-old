@@ -40,6 +40,34 @@ angular.module('PraveenApp').config(function($routeProvider) {
 });
 
 angular.module('PraveenApp').controller('AppCtrl', function($scope) {
+    $scope.menuItems = [
+        {
+            class: "fa-user",
+            text: "About",
+            url: "/about"
+        },
+        {
+            class: "fa-graduation-cap",
+            text: "Education",
+            url: "/education"
+        },
+        {
+            class: "fa-coffee",
+            text: "Work",
+            url: "/work"
+        },
+        {
+            class: "fa-code",
+            text: "Projects",
+            url: "/projects"
+        },
+        {
+            class: "fa-lightbulb-o",
+            text: "Random thoughts",
+            url: "/random"
+        },
+    ];
+
     $scope.navOpen = false;
     $scope.navToggle = angular.element( document.querySelector('#nav-toggle'));
 
