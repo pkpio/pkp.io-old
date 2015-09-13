@@ -39,7 +39,7 @@ angular.module('PraveenApp').config(function($routeProvider) {
         });
 });
 
-angular.module('PraveenApp').controller('AppCtrl', function($scope) {
+angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) {
     $scope.menuItems = [
         {
             class: "fa-user",
@@ -75,9 +75,11 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
         if ($scope.navOpen == true) {
             $scope.navToggle.removeClass('active');
             $scope.navOpen = false;
+            $mdSidenav('left').close();
         } else {
             $scope.navToggle.addClass('active');
             $scope.navOpen = true;
+            $mdSidenav('left').open();
         }
     };
 

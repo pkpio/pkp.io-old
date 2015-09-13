@@ -15,17 +15,17 @@
 </head>
 <body ng-controller="AppCtrl">
 
-<section flex class="full-height">
+<section flex>
 
     <!-- Navigation toggle -->
     <nav ng-click="toggle()">
         <a id="nav-toggle"><span></span></a>
     </nav>
 
-    <section flex layout="row" class="full-height">
+    <section flex layout="row">
 
         <!-- Navigation menu -->
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="navOpen">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="false">
 
             <div flex layout="column" id="profile">
                 <div flex layout="column" layout-padding layout-align="center center">
@@ -49,8 +49,6 @@
                     </span>
                 </md-button>
             </div>
-
-            <div flex></div>
 
         </md-sidenav>
 
