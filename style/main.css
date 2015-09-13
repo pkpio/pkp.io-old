@@ -1,0 +1,90 @@
+#profile{
+    width: 100%;
+    min-height: 200px;
+    min-width: 200px;
+    background-color: #0077b3;
+}
+#profile-name{
+    margin: 3px 5px 10px 5px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+.profile-icon{
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 5px 20px;
+    text-decoration: none;
+}
+.circular {
+    width: 180px;
+    height: 180px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#nav-toggle {
+    background: transparent;
+    position: fixed;
+    left: 20px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: translate(0%, -50%);
+    z-index: 1000;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 35px;
+    background: #0077b3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    content: '';
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    top: 10px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    transition: all 0.5s ease-in-out;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(135deg);
+    background: deeppink;
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-135deg);
+    background: deeppink;
+}

@@ -7,7 +7,7 @@ angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline']);
 // Theme setup
 angular.module('PraveenApp').config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
+        .primaryPalette('indigo')
         .accentPalette('deep-orange');
 });
 
@@ -18,7 +18,7 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/about.html',
             controller  : 'WorkCtrl'
         })
-        .when('/education',{
+        .when('/study',{
             templateUrl : 'view/study.html',
             controller  : 'WorkCtrl'
         })
@@ -26,7 +26,7 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/work.html',
             controller  : 'WorkCtrl'
         })
-        .when('/projects',{
+        .when('/project',{
             templateUrl : 'view/project.html',
             controller  : 'ProjectCtrl'
         })
@@ -40,9 +40,17 @@ angular.module('PraveenApp').config(function($routeProvider) {
 });
 
 angular.module('PraveenApp').controller('AppCtrl', function($scope) {
+    $scope.navOpen = false;
+    $scope.navToggle = angular.element( document.querySelector('#nav-toggle'));
 
-});
-
-angular.module('PraveenApp').controller('ToolbarCtrl', function($scope) {
+    $scope.toggle = function() {
+        if ($scope.navOpen == true) {
+            $scope.navToggle.removeClass('active');
+            $scope.navOpen = false;
+        } else {
+            $scope.navToggle.addClass('active');
+            $scope.navOpen = true;
+        }
+    };
 
 });
