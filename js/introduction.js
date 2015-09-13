@@ -12,7 +12,7 @@ angular.module('PraveenApp').controller('IntroCtrl', function($scope) {
     };
     $scope.messages = [
         "<b>Hello World!</b>",
-        "I'm <b>Praveen Kumar Pendyala</b>",
+        "I'm <b>Praveen</b>",
         "<i class='fa fa-male'> Human</i>",
         "<i class='fa fa-code'> Programmer</i>",
         "<i class='fa fa-cutlery'> Foodie</i>",
