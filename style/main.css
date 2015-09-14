@@ -18,16 +18,20 @@
 }
 .project-icon{
     width: 9%;
-    height: 9%;
     margin-right: 2%;
 }
 .skill-item {
     padding: 8px;
     background: #f0f0f0;
-    border-radius: 20px;
+    border-radius: 4px;
     box-sizing: border-box;
-    margin: 8px 10px 0px 0px;
+    margin: 8px 8px 0px 0px;
     cursor: pointer;
+    font-size: 0.7em;
+}
+.skill-item:hover {
+    background: #0077b3;
+    color: white;
 }
 .badge-text-info{
     font-size: 0.7em;
