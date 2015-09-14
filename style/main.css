@@ -4,11 +4,11 @@
 .timeline li timeline-badge {
     z-index: 30;
 }
+.timeline li {
+    margin: 50px 0px;
+}
 .timeline-panel h4{
     margin: 0px 0px;
-}
-timeline-panel {
-    margin: 0px -25px;
 }
 .intro-msg{
     color: grey;
