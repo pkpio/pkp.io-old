@@ -19,14 +19,14 @@
 <section flex>
 
     <!-- Navigation toggle -->
-    <nav ng-click="navOpen = !navOpen" ng-init="navOpen = false">
+    <nav ng-click="toggleNavbar()">
         <a id="nav-toggle" class="{{ (navOpen) ? 'active' : '' }}"><span></span></a>
     </nav>
 
     <section flex layout="row">
 
         <!-- Navigation menu -->
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-open="navOpen">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2 navigation" md-component-id="left" md-is-open="navOpen">
 
             <div layout="column" id="profile">
                 <div layout="column" layout-padding layout-align="center center">
@@ -44,7 +44,7 @@
             </div>
 
             <div layout="column" ng-repeat="item in menuItems">
-                <md-button class="menu-item" href="#{{ item.url }}">
+                <md-button class="menu-item" href="#{{ item.url }}" ng-click="toggleNavbar()">
                     <span layout="row" layout-align="start center">
                         <i class="fa fa-lg {{ item.class }} menu-icon"></i>{{ item.text }}
                     </span>
@@ -65,7 +65,9 @@
                 </div>
             </md-toolbar>
 
-            <div ng-view></div>
+            <div flex layout="row" layout-fill layout-align="center center" class="content-view">
+                <div ng-view flex="80" flex-md="90" flex-sm="95"></div>
+            </div>
         </md-content>
     </section>
 
@@ -85,6 +87,7 @@
 <!-- JS -->
 <script src="js/app.js"></script>
 <script src="js/introduction.js"></script>
+<script src="js/academics.js"></script>
 <script src="js/work.js"></script>
 </body>
 </html>

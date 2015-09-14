@@ -18,9 +18,9 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/about.html',
             controller  : 'WorkCtrl'
         })
-        .when('/study',{
-            templateUrl : 'view/study.html',
-            controller  : 'WorkCtrl'
+        .when('/academics',{
+            templateUrl : 'view/academics.html',
+            controller  : 'AcadCtrl'
         })
         .when('/work',{
             templateUrl : 'view/work.html',
@@ -39,7 +39,8 @@ angular.module('PraveenApp').config(function($routeProvider) {
         });
 });
 
-angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) {
+angular.module('PraveenApp').controller('AppCtrl', function($scope) {
+    $scope.navOpen = false;
     $scope.menuItems = [
         {
             class: "fa-user",
@@ -67,5 +68,9 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope, $mdSidenav) 
             url: "/random"
         }
     ];
+
+    $scope.toggleNavbar = function(){
+        $scope.navOpen = !$scope.navOpen;
+    }
 
 });

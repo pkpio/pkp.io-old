@@ -1,8 +1,21 @@
+.badge-text-info{
+    font-size: 0.7em;
+}
+.timeline li timeline-badge {
+    z-index: 30;
+}
+.timeline-panel h4{
+    margin: 0px 0px;
+}
+timeline-panel {
+    margin: 0px -25px;
+}
 .intro-msg{
     color: grey;
 }
-body{
-    color: #0077b3;
+body, html, .content-view{
+    color: grey;
+    background-color: #FAFAFA;
 }
 #profile{
     width: 100%;
@@ -41,21 +54,20 @@ body{
     -moz-border-radius: 150px;
 }
 nav {
+    cursor: pointer;
     width: 80%;
     margin: 0 auto;
     position: relative;
+    z-index: 200;
 }
-
 #nav-toggle {
     background: transparent;
     position: fixed;
     left: 20px;
-    top: 30px;
+    top: 10px;
     height: 50px;
     width: 50px;
     cursor: pointer;
-    transform: translate(0%, -50%);
-    z-index: 1000;
 }
 
 #nav-toggle span,

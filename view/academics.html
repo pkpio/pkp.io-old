@@ -1,0 +1,14 @@
+<timeline>
+    <timeline-event ng-repeat="study in studies">
+        <timeline-badge class="{{study.badgeClass}}">
+            <span class="badge-text-info">{{study.year}}</span>
+        </timeline-badge>
+        <timeline-panel class="{{event.badgeClass}}">
+            <timeline-heading>
+                <h4><i class="fa fa-graduation-cap fa-fw"></i> {{study.degree}}</h4>
+            </timeline-heading>
+            <p><i class="fa fa-university fa-fw"></i> {{study.place}}</p>
+            <p><i class="fa fa-file-text fa-fw"></i> {{study.grade}}</p>
+        </timeline-panel>
+    </timeline-event>
+</timeline>
