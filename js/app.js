@@ -16,7 +16,7 @@ angular.module('PraveenApp').config(function($routeProvider) {
     $routeProvider
         .when('/about',{
             templateUrl : 'view/about.html',
-            controller  : 'WorkCtrl'
+            controller  : 'AboutCtrl'
         })
         .when('/academics',{
             templateUrl : 'view/academics.html',

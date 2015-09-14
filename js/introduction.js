@@ -4,27 +4,37 @@
 
 angular.module('PraveenApp').controller('IntroCtrl', function($scope) {
     $scope.params = {
-        "baseDelay" : 1000,
-        "typeDelay" : 100,
-        "blinkCursor" : false,
-        "blinkDelay" : 100,
-        "lineDelay" : 1200
+        "eraseDelay" : 30,
+        "typeDelay" : 80,
+        "blinkCursor" : true,
+        "blinkDelay" : 80,
+        "initialDelay" : 1200
     };
     $scope.messages = [
-        "<b>Hello World!</b>",
-        "I'm <b>Praveen</b>",
-        "<i class='fa fa-male'> Human</i>",
-        "<i class='fa fa-code'> Programmer</i>",
-        "<i class='fa fa-cutlery'> Foodie</i>",
-        "Explore when ready ... "
+        "Hello World! ",
+        "I'm Praveen ",
+        "Human ",
+        "Programmer ",
+        "Foodie ",
+        ".... ",
+        "....... ",
+        "........... ",
+        "Expecting something cool? ",
+        "Sorry to disappoint ",
+        "I'm actually running out of things to say ",
+        "Sooner than I thought ",
+        "Time to look around ",
+        "Hint : Use the menu key ",
+        "See if something here interests you ",
+        "May be we can collaborate on a project ",
+        "Or grab a drink and discuss ",
+        "Now I'm all out ",
+        "For REALS! ",
+        "Seriously! No kidding! ",
+        "Looks like you are a tough one ",
+        "Well, so am I ...  "
     ];
-    $scope.getInitialDelay = function($index){
-        delay = $scope.params.baseDelay;
-        for(i=0; i<$index; i++)
-            delay += $scope.messages[i].length * $scope.params.typeDelay + $scope.params.lineDelay;
-        return delay;
-    };
-    $scope.getBlinking = function($index){
-        return ($index == $scope.messages.length - 1);
-    };
+    $scope.finish = function(){
+        // Repeat? ;)
+    }
 });

@@ -43,7 +43,8 @@ body, html, .content-view{
     padding: 8px 20px 8px 8px;
     color: grey;
 }
-.full-height{
+.full-area{
+    width: 100%;
     height: 100%;
 }
 .circular {
