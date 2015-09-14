@@ -170,6 +170,54 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
     /**
      *  **************  2014  ********************
      */
+        // SecurePUF.
+        {
+            showLevel: 4,
+            badgeClass: 'warning',
+            year: "2014",
+            title: 'SecurePUF',
+            icon:{
+                url: "img/projects/puf.png",
+                useUrl: true
+            },
+            details: 'An implementation of Lightweight Secure Physically Unclonable Function',
+            skills: [
+                "Verilog", "FPGA", "Xilinx ISE", "Virtex 6", "Hardware"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/securePUF"
+                },
+                {
+                    iconClass: "fa-github-alt",
+                    url: "https://github.com/praveendath92/securePUF_sw"
+                }
+            ]
+        },
+
+        // PDL.
+        {
+            showLevel: 4,
+            badgeClass: 'warning',
+            year: "2014",
+            title: 'Programmable Delay Logic',
+            icon:{
+                url: "img/projects/puf.png",
+                useUrl: true
+            },
+            details: 'An implementation of using PDLs - Programmable Delay Logics on a virtex 5 FPGA. ' +
+            ' Delays are configurable to the order of 10 pico seconds',
+            skills: [
+                "Verilog", "FPGA", "Xilinx ISE", "Virtex 5", "Hardware"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/PDL"
+                }
+            ]
+        },
 
         // BARD
         {
@@ -287,10 +335,84 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
     /**
      *  **************  2013  ********************
      */
+        // Dual core PUF.
+        {
+            showLevel: 4,
+            badgeClass: 'default',
+            year: "2013",
+            title: 'Dual-core ALU based PUF',
+            icon:{
+                url: "img/projects/puf.png",
+                useUrl: true
+            },
+            details: 'Implementation of a dual core adder based PUF on FPGA. ' +
+            'Nominated as Best paper candidate at Design Automation Conference 2014',
+            skills: [
+                "Verilog", "FPGA", "Xilinx ISE", "Virtex 5", "Hardware"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/dual_core_PUF_with_PDL_and_ethernet"
+                },
+                {
+                    iconClass: "fa-github-alt",
+                    url: "https://github.com/praveendath92/dual_core_PUF_with_PDL_and_ethernet_SW"
+                },
+                {
+                    iconClass: "fa-file-pdf-o",
+                    url: "http://dl.acm.org/citation.cfm?id=2593192"
+                }
+            ]
+        },
+
+        // DRAM interfacing Thesis
+        {
+            showLevel: 4,
+            badgeClass: 'default',
+            year: "2013",
+            title: 'DRAM of a Xilinx virtex 5',
+            icon:{
+                url: "img/projects/puf.png",
+                useUrl: true
+            },
+            details: 'Interfacing the DRAM of a Xilinx virtex 5 XUPV5 FPGA board ',
+            skills: [
+                "Verilog", "FPGA", "Xilinx ISE", "Virtex 5", "Hardware", "MIG"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/DDR2_Interface_Xilinx_XUPV5"
+                }
+            ]
+        },
+
+        // Greedy4Tasks.
+        {
+            showLevel: 3,
+            badgeClass: 'default',
+            year: "2013",
+            title: 'Greedy4Tasks',
+            icon:{
+                url: "img/projects/greedy4task.png",
+                useUrl: true
+            },
+            details: 'Greedy algorithm for activity and task scheduling',
+            skills: [
+                "C++", "Python", "Scilab"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/Greed4Tasks"
+                }
+            ]
+        },
 
         // GroupChat.
         {
-            showLevel: 4,
+            showLevel: 2,
             badgeClass: 'default',
             year: "2013",
             title: 'GroupChat',
@@ -310,6 +432,32 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
                 {
                     iconClass: "fa-download",
                     url: "https://play.google.com/store/apps/details?id=in.co.praveenkumar.groupchat"
+                }
+            ]
+        },
+
+        // SIRC PUF.
+        {
+            showLevel: 4,
+            badgeClass: 'default',
+            year: "2013",
+            title: 'SIRC PUF',
+            icon:{
+                url: "img/projects/puf.png",
+                useUrl: true
+            },
+            details: 'Implementation of a dual core adder based PUF on FPGA',
+            skills: [
+                "Verilog", "FPGA", "Xilinx ISE", "Virtex 5", "Hardware"
+            ],
+            links: [
+                {
+                    iconClass: "fa-github",
+                    url: "https://github.com/praveendath92/SIRC_HW_Xilinx_XUPV5_Hardware_PUF"
+                },
+                {
+                    iconClass: "fa-github-alt",
+                    url: "https://github.com/praveendath92/SIRC_HW_Xilinx_XUPV5_Software_PUF"
                 }
             ]
         }
