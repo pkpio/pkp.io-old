@@ -583,7 +583,7 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
             title: 'SOSMate',
             icon:{
                 url: "img/projects/mugshot.png",
-                useUrl: false
+                useUrl: true
             },
             details: 'One touch location alert application for Android smart phones',
             skills: [
@@ -628,8 +628,8 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
             year: "2012",
             title: 'Stopwatch on FPGA',
             icon:{
-                url: "img/projects/jellybeannotifsdemo.png",
-                useUrl: false
+                url: "img/projects/puf.png",
+                useUrl: true
             },
             details: 'A stop watch program on CPLD board. Just to know basics',
             skills: [
@@ -671,7 +671,7 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
             title: 'Greed4Speed',
             icon:{
                 url: "img/projects/puf.png",
-                useUrl: false
+                useUrl: true
             },
             details: 'A car racing game coded on a de0nano fpga using graphical lcd and gsensor',
             skills: [
