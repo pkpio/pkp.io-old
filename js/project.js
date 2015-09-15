@@ -390,7 +390,7 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope) {
             links: [
                 {
                     iconClass: "fa-github",
-                    url: "https://github.com/praveendath92/Greed4Tasks"
+                    url: "https://github.com/praveendath92/Greedy4Tasks"
                 }
             ]
         },
