@@ -1,53 +1,55 @@
-<div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
-    <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
-    <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
-    <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
+<div flex layout="column" layout-align="center center">
+    <div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
+        <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
+    </div>
+
+    <timeline>
+
+        <span ng-repeat="year in projects">
+
+            <timeline-event ng-repeat="project in year.projects">
+
+                <!-- Badge -->
+                <timeline-badge class="year-{{ project.year }}">
+                    <span class="badge-text-info">{{project.year}}</span>
+                </timeline-badge>
+
+                <!-- Project info -->
+                <timeline-panel class="{{ project.badgeClass }}">
+
+                    <!-- Title -->
+                    <timeline-heading>
+                        <h4 layout="row" layout-align="start center" layout-padding>
+                            <img ng-src="{{ project.icon.url }}" class="project-icon" data-ng-show="{{ project.icon.useUrl }}">
+                            <i class="fa fa-3x fa-code" data-ng-show="{{ !project.icon.useUrl }}"></i>
+                            <span class="project-title">{{ project.title }}</span>
+                        </h4>
+                    </timeline-heading>
+
+                    <!-- Skills -->
+                    <div layout="row" layout-wrap layout-align="start start">
+                        <span class="skill-item" ng-repeat="skill in project.skills">
+                            {{ skill }}
+                        </span>
+                    </div>
+
+                    <!-- Details -->
+                    <p class="project-details">{{ project.details }}</p>
+
+                    <!-- Links -->
+                    <div flex layout="row" layout-align="center center">
+                        <span ng-repeat="link in project.links">
+                            <a href="{{ link.url }}" class="project-link">
+                                <i class="fa fa-fw {{ link.iconClass }} "></i>
+                            </a>
+                        </span>
+                    </div>
+
+                </timeline-panel>
+
+            </timeline-event>
+        </span>
+    </timeline>
 </div>
-
-<timeline>
-
-    <span ng-repeat="year in projects">
-
-        <timeline-event ng-repeat="project in year.projects">
-
-            <!-- Badge -->
-            <timeline-badge class="year-{{ project.year }}">
-                <span class="badge-text-info">{{project.year}}</span>
-            </timeline-badge>
-
-            <!-- Project info -->
-            <timeline-panel class="{{ project.badgeClass }}">
-
-                <!-- Title -->
-                <timeline-heading>
-                    <h4 layout="row" layout-align="start center" layout-padding>
-                        <img ng-src="{{ project.icon.url }}" class="project-icon" data-ng-show="{{ project.icon.useUrl }}">
-                        <i class="fa fa-3x fa-code" data-ng-show="{{ !project.icon.useUrl }}"></i>
-                        <span class="project-title">{{ project.title }}</span>
-                    </h4>
-                </timeline-heading>
-
-                <!-- Skills -->
-                <div layout="row" layout-wrap layout-align="start start">
-                    <span class="skill-item" ng-repeat="skill in project.skills">
-                        {{ skill }}
-                    </span>
-                </div>
-
-                <!-- Details -->
-                <p class="project-details">{{ project.details }}</p>
-
-                <!-- Links -->
-                <div flex layout="row" layout-align="center center">
-                    <span ng-repeat="link in project.links">
-                        <a href="{{ link.url }}" class="project-link">
-                            <i class="fa fa-fw {{ link.iconClass }} "></i>
-                        </a>
-                    </span>
-                </div>
-
-            </timeline-panel>
-
-        </timeline-event>
-    </span>
-</timeline>
