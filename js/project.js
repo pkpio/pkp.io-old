@@ -24,6 +24,6 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope, $timeout
    };
 
     // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, 200);
+    $timeout($scope.loadData, 500);
     
 });
