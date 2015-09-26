@@ -5,9 +5,6 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope, $timeout
     $scope.projects = null;
     $scope.ready = 0;
 
-    // Delayed call to avoid navbar freeze on close
-    $timeout(loadData, 200);
-
     // Get projects info
    $scope.loadData = function(){
        var req = {
@@ -25,4 +22,8 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope, $timeout
            }
        );
    };
+
+    // Delayed call to avoid navbar freeze on close
+    $timeout($scope.loadData, 200);
+    
 });
