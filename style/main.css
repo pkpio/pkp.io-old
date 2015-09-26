@@ -70,7 +70,6 @@
     color: grey;
 }
 body, html, .content-view{
-    color: grey;
     background-color: #FAFAFA;
 }
 #profile{
@@ -110,69 +109,49 @@ body, html, .content-view{
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
 }
-nav {
+.menu-wrapper{
+    position: absolute;
+    z-index: 300;
+}
+.menu {
     cursor: pointer;
-    width: 80%;
-    margin: 0 auto;
     position: relative;
-    z-index: 200;
+    width: 35px;
+    height: 35px;
+    outline-color: transparent;
+    margin: 10px;
 }
-#nav-toggle {
-    background: transparent;
-    position: fixed;
-    left: 20px;
-    top: 10px;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-}
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 2px;
-    width: 30px;
-    background: deeppink;
+.menu-global {
+    backface-visibility: hidden;
     position: absolute;
     left: 0;
-    top: 50%;
-    display: block;
-    content: '';
+    border-top: 2px solid deeppink;
+    width: 100%;
+    transition: 0.35s;
 }
-
-#nav-toggle span:before {
-    top: -10px;
+.menu-top {
+    top: 6px;
 }
-
-#nav-toggle span:after {
-    top: 10px;
+.menu-middle {
+    top: 18px;
 }
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-    transition: all 0.5s ease-in-out;
+.menu-bottom {
+    top: 30px;
 }
-
-#nav-toggle.active span {
-    background-color: transparent;
+.menu-top.active {
+    backface-visibility: hidden;
+    top: 15px;
+    transform: rotate(45deg);
+    transition: 0.35s 0.5s;
 }
-
-#nav-toggle.active span:before,
-#nav-toggle.active span:after {
-    top: 0;
+.menu-middle.active {
+    opacity: 0;
 }
-
-#nav-toggle.active span:before {
-    transform: rotate(135deg);
-    background: deeppink;
-}
-
-#nav-toggle.active span:after {
-    transform: rotate(-135deg);
-    background: deeppink;
+.menu-bottom.active {
+    backface-visibility: hidden;
+    top: 15px;
+    transform: rotate(-45deg);
+    transition: 0.35s 0.5s;
 }
 #loading{
     margin-top: 100px;

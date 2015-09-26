@@ -17,61 +17,61 @@
 </head>
 <body ng-controller="AppCtrl">
 
-<section flex>
+<section flex layout="row" style="width:100%;height:100%;">
 
     <!-- Navigation toggle -->
-    <nav ng-click="toggleNavbar()">
-        <a id="nav-toggle" class="{{ (navOpen) ? 'active' : '' }}"><span></span></a>
-    </nav>
+    <div class="menu-wrapper">
+        <div class="menu" ng-click="toggleNavbar()">
+            <span class="menu-global menu-top {{ (navOpen) ? 'active' : '' }}"></span>
+            <span class="menu-global menu-middle {{ (navOpen) ? 'active' : '' }}"></span>
+            <span class="menu-global menu-bottom {{ (navOpen) ? 'active' : '' }}"></span>
+        </div>
+    </div>
 
-    <section flex layout="row">
+    <!-- Navigation drawer -->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2 navigation" md-component-id="left" md-is-open="navOpen">
 
-        <!-- Navigation menu -->
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2 navigation" md-component-id="left" md-is-open="navOpen">
-
-            <div layout="column" id="profile">
-                <div layout="column" layout-padding layout-align="center center">
-                    <img class="circular" src="img/praveen.jpg"/>
-                </div>
-                <div layout="column" layout-align="start center">
-                    <p id="profile-name">Praveen Kumar Pendyala</p>
-                </div>
-                <div layout="row" layout-align="center center" layout-padding>
-                    <a class="fa fa-lg profile-icon fa-facebook-official" href="https://www.facebook.com/pamarru"></a>
-                    <a class="fa fa-lg profile-icon fa-linkedin" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
-                    <a class="fa fa-lg profile-icon fa-github" href="https://github.com/praveendath92"></a>
-                    <a class="fa fa-lg profile-icon fa-envelope" href="mailto:m@praveen.xyz"></a>
-                </div>
+        <div layout="column" id="profile">
+            <div layout="column" layout-padding layout-align="center center">
+                <img class="circular" src="img/praveen.jpg"/>
             </div>
-
-            <div layout="column" ng-repeat="item in menuItems">
-                <md-button class="menu-item" href="#{{ item.url }}" ng-click="toggleNavbar()">
-                    <span layout="row" layout-align="start center">
-                        <i class="fa fa-lg {{ item.class }} menu-icon"></i>{{ item.text }}
-                    </span>
-                </md-button>
+            <div layout="column" layout-align="start center">
+                <p id="profile-name">Praveen Kumar Pendyala</p>
             </div>
-
-        </md-sidenav>
-
-        <!-- Content -->
-        <md-content flex layout="column" flex layout-align="center center">
-            <md-toolbar>
-                <div class="md-toolbar-tools" layout="column" layout-align="center center">
-                    <p>
-                        <i class="fa fa-pinterest-square"></i>
-                        <i class="fa fa-xing"></i>
-                        <i class="fa fa-pinterest-square"></i>
-                    </p>
-                </div>
-            </md-toolbar>
-
-            <div flex layout="row" layout-fill layout-align="center center" class="content-view">
-                <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column" layout-fill></div>
+            <div layout="row" layout-align="center center" layout-padding>
+                <a class="fa fa-lg profile-icon fa-facebook-official" href="https://www.facebook.com/pamarru"></a>
+                <a class="fa fa-lg profile-icon fa-linkedin" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
+                <a class="fa fa-lg profile-icon fa-github" href="https://github.com/praveendath92"></a>
+                <a class="fa fa-lg profile-icon fa-envelope" href="mailto:m@praveen.xyz"></a>
             </div>
-        </md-content>
-    </section>
+        </div>
 
+        <div layout="column" ng-repeat="item in menuItems">
+            <md-button class="menu-item" href="#{{ item.url }}" ng-click="toggleNavbar()">
+                <span layout="row" layout-align="start center">
+                    <i class="fa fa-lg {{ item.class }} menu-icon"></i>{{ item.text }}
+                </span>
+            </md-button>
+        </div>
+
+    </md-sidenav>
+
+    <!-- Content -->
+    <div flex="column">
+        <md-toolbar layout="column" flex layout-align="center center">
+            <div class="md-toolbar-tools" layout="row" layout-align="center center">
+                <p>
+                    <i class="fa fa-pinterest-square"></i>
+                    <i class="fa fa-xing"></i>
+                    <i class="fa fa-pinterest-square"></i>
+                </p>
+            </div>
+        </md-toolbar>
+
+        <div flex layout="row" layout-fill layout-align="center center" class="content-view">
+            <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column" layout-fill></div>
+        </div>
+    </div>
 </section>
 
 <!-- Angular -->
