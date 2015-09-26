@@ -11,6 +11,11 @@ angular.module('PraveenApp').config(function($mdThemingProvider) {
         .accentPalette('deep-orange');
 });
 
+// Constants setup
+angular.module('PraveenApp').constant('config', {
+    baseUrl: 'http://pkp.io'
+});
+
 // Route setup
 angular.module('PraveenApp').config(function($routeProvider) {
     $routeProvider

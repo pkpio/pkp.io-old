@@ -174,3 +174,27 @@ nav {
     transform: rotate(-135deg);
     background: deeppink;
 }
+#loading{
+    position: relative;
+    top: 100px;
+}
+#loading-cog1{
+    font-size: 2.5em;
+    position: relative;
+    left: 10px;
+    color: #F34235;
+}
+#loading-cog2{
+    font-size: 3em;
+    position: relative;
+    top: 20px;
+    color: #02A8F3;
+    -webkit-animation: fa-spin 2s infinite linear reverse;
+    animation: fa-spin 2s infinite linear reverse;
+}
+#loading-cog3{
+    font-size: 2.5em;
+    position: relative;
+    left: -10px;
+    color: #FEC006;
+}
