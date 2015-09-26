@@ -175,8 +175,8 @@ nav {
     background: deeppink;
 }
 #loading{
-    position: relative;
-    top: 100px;
+    margin-top: 100px;
+    min-height: 100px;
 }
 #loading-cog1{
     font-size: 2.5em;
