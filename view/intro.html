@@ -13,7 +13,7 @@
               type-delay="{{ params.typeDelay }}"
               text=message
               start=params.getStart($index)
-              initial-delay ="{{ params.sentenceDelay }}"
+              initial-delay="{{ params.sentenceDelay }}"
               callback-fn=params.doFinish($index)>
         </code>
         <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"
