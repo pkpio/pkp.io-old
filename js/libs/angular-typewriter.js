@@ -10,7 +10,7 @@ angular.module('angularTypewrite').directive('typewrite', ['$timeout', function 
             typeDelay = $attrs.typeDelay || 200,
             eraseDelay = $attrs.eraseDelay || typeDelay / 2,
             blinkDelay = $attrs.blinkDelay ? getAnimationDelay($attrs.blinkDelay) : false,
-            cursor = $attrs.cursor || '|',
+            cursor = $attrs.cursor || '',
             blinkCursor = typeof $attrs.blinkCursor !== 'undefined' ? $attrs.blinkCursor === 'true' : true,
             currentText,
             textArray,
@@ -54,7 +54,7 @@ angular.module('angularTypewrite').directive('typewrite', ['$timeout', function 
                     if ($scope.callbackFn) {
                         $scope.callbackFn();
                     }
-                    blinkIt(element, charIndex, currentText);
+                    //blinkIt(element, charIndex, currentText);
                 }
             }
         }
