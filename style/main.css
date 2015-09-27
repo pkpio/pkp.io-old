@@ -67,7 +67,7 @@
     margin: 0px 0px;
 }
 .intro-msg{
-    color: grey;
+
 }
 body, html, .content-view{
     background-color: #FAFAFA;
@@ -176,4 +176,8 @@ body, html, .content-view{
     position: relative;
     left: -10px;
     color: #FEC006;
+}
+.cursor{
+    position: relative;
+    left: -4px;
 }

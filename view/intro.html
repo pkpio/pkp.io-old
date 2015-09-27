@@ -1,0 +1,23 @@
+<div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
+    <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
+    <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
+    <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
+</div>
+
+<div flex layout-padding layout="row" layout-align="center center" layout-filling>
+
+    <div flex="40" flex-md="60" flex-sm="100" style="margin-top: 15%;">
+        <code ng-repeat="message in messages"
+              class="intro-msg"
+              typewrite
+              type-delay="{{ params.typeDelay }}"
+              text=message
+              start=params.getStart($index)
+              initial-delay ="{{ params.sentenceDelay }}"
+              callback-fn=params.doFinish($index)>
+        </code>
+        <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"
+           ng-show="ready"></i>
+
+    </div>
+</div>
