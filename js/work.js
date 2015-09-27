@@ -2,31 +2,28 @@
  * Created by praveen on 12.09.15.
  */
 
-angular.module('PraveenApp').controller('WorkCtrl', function($scope) {
-    $scope.events = [{
-        badgeClass: 'info',
-        badgeIconClass: 'glyphicon-check',
-        title: 'First heading',
-        content: 'Some awesome content.'
-    },{
-        badgeClass: 'info',
-        badgeIconClass: 'glyphicon-check',
-        title: 'First heading',
-        content: 'Some awesome content.'
-    },{
-        badgeClass: 'info',
-        badgeIconClass: 'glyphicon-check',
-        title: 'First heading',
-        content: 'Some awesome content.'
-    },{
-        badgeClass: 'info',
-        badgeIconClass: 'glyphicon-check',
-        title: 'First heading',
-        content: 'Some awesome content.'
-    }, {
-        badgeClass: 'warning',
-        badgeIconClass: 'glyphicon-credit-card',
-        title: 'Second heading',
-        content: 'More awesome content.'
-    }];
+angular.module('PraveenApp').controller('WorkCtrl', function($scope, $timeout, config, $http) {
+    $scope.works = null;
+    $scope.ready = 0;
+
+    // Get works info
+    $scope.loadData = function(){
+        var req = {
+            method: 'GET',
+            url: config.baseUrl + '/data/work.json'
+        };
+        $http(req)
+            .then(
+            function (response) { // Success callback
+                $scope.works = response.data;
+                $scope.ready = 1;
+            },
+            function (response) { //Error callback
+                console.log(response.toString());
+            }
+        );
+    };
+
+    // Delayed call to avoid navbar freeze on close
+    $timeout($scope.loadData, 500);
 });

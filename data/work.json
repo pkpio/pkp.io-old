@@ -1,0 +1,34 @@
+[
+  {
+    "year" : "Now",
+    "icon" : "img/works/cased.png",
+    "company" : "Center for Advanced Security Research Darmstadt",
+    "site" : "http://www.cased.de/",
+    "position" : "Student Research Assistant",
+    "duration" : "November 2014 - Present"
+  },
+  {
+    "year" : 2015,
+    "icon" : "img/works/gsoc15.jpg",
+    "company" : "Google Summer of Code",
+    "site" : "https://www.google-melange.com/gsoc/homepage/google/gsoc2015",
+    "position" : "Supporting Mentor, Beaglebone.org",
+    "duration" : "April 2015 - August 2015"
+  },
+  {
+    "year" : 2014,
+    "icon" : "img/works/gsoc14.png",
+    "company" : "Google Summer of Code",
+    "site" : "https://www.google-melange.com/gsoc/homepage/google/gsoc2014",
+    "position" : "Contract Developer, Beaglebone.org",
+    "duration" : "April 2014 - September 2014"
+  },
+  {
+    "year" : 2013,
+    "company" : "Rice University",
+    "site" : "http://www.rice.edu/",
+    "icon" : "img/works/rice.jpg",
+    "position" : "Research Assistant",
+    "duration" : "May 2013 - July 2013"
+  }
+]

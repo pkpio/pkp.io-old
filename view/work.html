@@ -1,13 +1,43 @@
-<timeline>
-    <timeline-event ng-repeat="event in events">
-        <timeline-badge class="{{event.badgeClass}}">
-            <i class="glyphicon {{event.badgeIconClass}}"></i>
-        </timeline-badge>
-        <timeline-panel class="{{event.badgeClass}}">
-            <timeline-heading>
-                <h4>{{event.title}}</h4>
-            </timeline-heading>
-            <p>{{event.content}}</p>
-        </timeline-panel>
-    </timeline-event>
-</timeline>
+<div flex="100" layout="column" layout-align="center center">
+    <div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
+        <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
+    </div>
+
+    <timeline layout-fill>
+        <timeline-event ng-repeat="work in works">
+
+            <!-- Badge -->
+            <timeline-badge class="year-{{ work.year }}">
+                <span class="badge-text-info">{{work.year}}</span>
+            </timeline-badge>
+
+            <!-- Work info -->
+            <timeline-panel class="{{ work.badgeClass }}">
+
+                <!-- Company & Logo -->
+                <timeline-heading>
+                    <h4 layout="row" layout-align="start center" layout-padding>
+                        <img ng-src="{{ work.icon }}" class="work-icon">
+                        <a class="work-title" ng-href="{{ work.site }}" target="_blank">{{ work.company }}</a>
+                    </h4>
+                </timeline-heading>
+
+                <!-- details -->
+                <span class="work-details">
+                    <p layout-align="start center" layout="row">
+                        <i class="fa fa-user work-info-icon"></i>
+                        {{ work.position }}
+                    </p>
+                    <p layout-align="start center" layout="row">
+                        <i class="fa fa-clock-o work-info-icon"></i>
+                        {{ work.duration }}
+                    </p>
+                </span>
+
+            </timeline-panel>
+
+        </timeline-event>
+    </timeline>
+</div>

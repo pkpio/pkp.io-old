@@ -2,13 +2,13 @@
     background-color: #4BAE4F !important;
 }
 .year-2015{
-    background-color: #02A8F3 !important;
+    background-color: #3E50B4 !important;
 }
 .year-2014{
-    background-color: #F34235 !important;
+    background-color: #02A8F3 !important;
 }
 .year-2013{
-    background-color: #3E50B4 !important;
+    background-color: #F34235 !important;
 }
 .year-2012{
     background-color: #5F7C8A !important;
@@ -17,10 +17,13 @@
     background-color: #FEC006 !important;
 }
 .year-2010{
-    background-color: #5F7C8A !important;
+    background-color: #FEC006 !important;
 }
-.project-details{
-    font-size: 1em;
+.year-2008{
+    background-color: #F34235 !important;
+}
+.project-details, .work-details{
+    font-size: 0.9em;
     line-height: 1.618em;
     margin-bottom: 1.618em;
     margin-top: 1.618em;
@@ -29,17 +32,28 @@
 .project-link:hover{
     color: #0077b3;
 }
-.project-title{
-    margin-left: 2%;
+.project-title,.work-title{
+    margin-left: 10px;
 }
 .project-link{
     color: grey;
     font-size: 1.5em;
     margin: 0px 8px;
 }
-.project-icon{
-    width: 9%;
-    margin-right: 2%;
+.project-icon,.work-icon{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+a.work-title{
+    text-decoration: none;
+    color: inherit;
+}
+.work-info-icon{
+    font-size: 1.5em;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: #666666;
 }
 .skill-item {
     padding: 8px;
@@ -142,7 +156,7 @@ body, html, .content-view{
     backface-visibility: hidden;
     top: 15px;
     transform: rotate(45deg);
-    transition: 0.35s 0.5s;
+    transition: 0.5s;
 }
 .menu-middle.active {
     opacity: 0;
@@ -151,7 +165,7 @@ body, html, .content-view{
     backface-visibility: hidden;
     top: 15px;
     transform: rotate(-45deg);
-    transition: 0.35s 0.5s;
+    transition: 0.5s;
 }
 #loading{
     margin-top: 100px;
