@@ -7,7 +7,7 @@
 <div flex layout-padding layout="row" layout-align="center center" layout-filling>
 
     <div flex="40" flex-md="60" flex-sm="100" style="margin-top: 15%;">
-        <code ng-repeat="message in messages"
+        <code ng-repeat="message in messages track by $index"
               class="intro-msg"
               typewrite
               type-delay="{{ params.typeDelay }}"
