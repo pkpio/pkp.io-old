@@ -36,13 +36,17 @@ angular.module('angularTypewrite').directive('typewrite', ['$timeout', function 
         }
 
         function updateIt(element, charIndex, arrIndex, text) {
-            if (charIndex <= text.length) {
+            if(!text){
+                if ($scope.callbackFn) {
+                    $scope.callbackFn();
+                }
+            }
+            else if (charIndex <= text.length) {
                 element.html(text.substring(0, charIndex) + cursor);
                 charIndex++;
                 timer = $timeout(function () {
                     updateIt(element, charIndex, arrIndex, text);
                 }, typeDelay);
-                return;
             } else {
                 charIndex--;
                 // check if it's an array
