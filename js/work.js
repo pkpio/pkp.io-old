@@ -25,5 +25,5 @@ angular.module('PraveenApp').controller('WorkCtrl', function($scope, $timeout, c
     };
 
     // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, 500);
+    $timeout($scope.loadData, config.loadDelay);
 });

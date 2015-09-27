@@ -13,7 +13,8 @@ angular.module('PraveenApp').config(function($mdThemingProvider) {
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
-    baseUrl: 'http://pkp.io'
+    baseUrl : 'http://pkp.io',  // Baseurl to load site resources
+    loadDelay : 500             // Min. delay before sending data load requests
 });
 
 // Route setup

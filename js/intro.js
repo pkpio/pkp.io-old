@@ -38,5 +38,5 @@ angular.module('PraveenApp').controller('IntroCtrl', function($scope, $timeout, 
     };
 
     // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, 500);
+    $timeout($scope.loadData, config.loadDelay);
 });
