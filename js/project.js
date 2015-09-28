@@ -9,7 +9,7 @@ angular.module('PraveenApp').controller('ProjectCtrl', function($scope, $timeout
    $scope.loadData = function(){
        var req = {
            method: 'GET',
-           url: config.baseUrl + '/data/project.json'
+           url: 'data/project.json'
        };
        $http(req)
            .then(
