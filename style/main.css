@@ -195,3 +195,18 @@ body, html, .content-view{
     position: relative;
     left: -4px;
 }
+.terminal{
+    background-color: black;
+    color: whitesmoke;
+}
+.terminal-title{
+    background-color: #3F51B5;
+    color: whitesmoke;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 14px;
+}
+.terminal-content{
+    padding: 8px;
+    min-height: 300px;
+}

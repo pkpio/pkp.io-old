@@ -4,8 +4,8 @@
 
 angular.module('PraveenApp').controller('AboutCtrl', function($scope, $timeout, config, $http) {
     $scope.params = {
-        typeDelay : 80,
-        sentenceDelay : 600,
+        typeDelay : 50,
+        sentenceDelay : 500,
         currentIndex : 0,
         allDone : false,
         doFinish : function(index){

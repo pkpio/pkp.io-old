@@ -37,8 +37,8 @@ angular.module('PraveenApp').config(function($routeProvider) {
             controller  : 'ProjectCtrl'
         })
         .when('/',{
-            templateUrl : 'view/intro.html',
-            controller  : 'IntroCtrl'
+            templateUrl : 'view/about.html',
+            controller  : 'AboutCtrl'
         })
         .otherwise({
             redirectTo: '/'
