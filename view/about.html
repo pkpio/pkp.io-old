@@ -2,26 +2,21 @@
 
     <md-tab label="Intro">
         <div class="md-padding">
-
             <!-- Loading gears -->
             <div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
                 <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
                 <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
                 <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
             </div>
-
             <!-- Terminal content -->
             <div flex layout="row" layout-align="center center" layout-fill layout-wrap>
-
                 <div flex="40" flex-md="60" flex-sm="100" class="terminal" ng-show="ready">
                     <!-- Title -->
                     <div class="terminal-title" layout-align="center center" layout="row">
-                        <code>guest@pkp.io</code>
+                        <code>guest@pkp.io:~/</code>
                     </div>
-
                     <!-- Content -->
                     <div class="terminal-content">
-                        <code>guest@pkp.io:~/$ intro</code><br/><br/>
                         <code ng-repeat="message in messages track by $index"
                               class="intro-msg"
                               typewrite
@@ -33,15 +28,14 @@
                         </code>
                         <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"></i>
                     </div>
-
                 </div>
             </div>
         </div>
     </md-tab>
 
-    <md-tab label="two">
+    <md-tab label="Profile">
         <md-content class="md-padding">
-            <h1 class="md-display-2">Tab Two</h1>
+            <h1 class="md-display-2">Praveen Kumar Pendyala</h1>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat
                 neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas
@@ -53,23 +47,12 @@
                 enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit.
                 Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci
                 posuere, nec luctus mauris semper.</p>
-
-            <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec
-                posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor.
-                Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus.
-                Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel
-                tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-
-            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie
-                dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi.
-                Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu
-                enim scelerisque, finibus commodo lectus.</p>
         </md-content>
     </md-tab>
 
-    <md-tab label="three">
+    <md-tab label="Resume">
         <md-content class="md-padding">
-            <h1 class="md-display-2">Tab Three</h1>
+            <h1 class="md-display-2">Resume</h1>
 
             <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie
                 dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi.
