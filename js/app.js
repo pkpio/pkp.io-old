@@ -14,7 +14,7 @@ angular.module('PraveenApp').config(function($mdThemingProvider) {
 // Constants setup
 angular.module('PraveenApp').constant('config', {
     baseUrl : 'http://pkp.io',  // Baseurl to load site resources
-    loadDelay : 500             // Min. delay before sending data load requests
+    loadDelay : 100             // Min. delay before sending data load requests
 });
 
 // Route setup
@@ -46,37 +46,26 @@ angular.module('PraveenApp').config(function($routeProvider) {
 });
 
 angular.module('PraveenApp').controller('AppCtrl', function($scope) {
-    $scope.navOpen = false;
     $scope.menuItems = [
         {
             class: "fa-user",
             text: "About",
-            url: "/about"
+            url: "#/about"
         },
         {
             class: "fa-graduation-cap",
             text: "Academics",
-            url: "/academics"
+            url: "#/academics"
         },
         {
             class: "fa-coffee",
             text: "Work",
-            url: "/work"
+            url: "#/work"
         },
         {
             class: "fa-code",
             text: "Projects",
-            url: "/projects"
-        },
-        {
-            class: "fa-lightbulb-o",
-            text: "Random thoughts",
-            url: "/random"
+            url: "#/projects"
         }
     ];
-
-    $scope.toggleNavbar = function(){
-        $scope.navOpen = !$scope.navOpen;
-    }
-
 });
