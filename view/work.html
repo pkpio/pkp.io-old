@@ -7,14 +7,11 @@
 
     <timeline layout-fill class="timeline-maxwidth">
         <timeline-event ng-repeat="work in works">
-
-            <!-- Badge -->
             <timeline-badge class="year-{{ work.year }}">
                 <span class="badge-text-info">{{work.year}}</span>
             </timeline-badge>
 
             <timeline-panel>
-                <!-- Company & Logo -->
                 <timeline-heading>
                     <h4 layout="row" layout-align="start center" layout-padding>
                         <img ng-src="{{ work.icon }}" class="work-icon">
@@ -22,7 +19,6 @@
                     </h4>
                 </timeline-heading>
 
-                <!-- details -->
                 <span class="work-details">
                     <p layout-align="start center" layout="row">
                         <i class="fa fa-user work-info-icon"></i>
@@ -34,7 +30,6 @@
                     </p>
                 </span>
             </timeline-panel>
-
         </timeline-event>
     </timeline>
 </div>
