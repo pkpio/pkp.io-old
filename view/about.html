@@ -1,14 +1,34 @@
- <div layout="column" layout-padding layout-align="center center">
-    <img id="profile-img" src="img/praveen.jpg"/>
-</div>
+<div layout-align="center center" layout="column">
 
-<div layout="column" layout-align="start center">
-    <p id="profile-name">Praveen Kumar Pendyala</p>
-</div>
+    <!-- Profile card -->
+    <md-card class="max-content-width">
+        <div layout="column" layout-padding layout-align="center center" id="profile">
+            <img id="profile-img" src="img/praveen.jpg"/>
+            <p id="profile-name">Praveen Kumar Pendyala</p>
+            <div layout="row" layout-align="center center" layout-padding>
+                <a class="fa fa-lg fa-fw profile-icon fa-facebook-square" href="https://www.facebook.com/pamarru"></a>
+                <a class="fa fa-lg fa-fw profile-icon fa-google-plus-square" href="https://plus.google.com/+PraveenKumarPendyala/"></a>
+                <a class="fa fa-lg fa-fw profile-icon fa-linkedin-square" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
+                <a class="fa fa-lg fa-fw profile-icon fa-github-square" href="https://github.com/praveendath92"></a>
+            </div>
+        </div>
 
-<div layout="row" layout-align="center center" layout-padding>
-    <a class="fa fa-lg profile-icon fa-facebook-official" href="https://www.facebook.com/pamarru"></a>
-    <a class="fa fa-lg profile-icon fa-linkedin" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
-    <a class="fa fa-lg profile-icon fa-github" href="https://github.com/praveendath92"></a>
-    <a class="fa fa-lg profile-icon fa-envelope" href="mailto:m@praveen.xyz"></a>
+        <md-card-content layout-align="center center" layout="column">
+            <p class="profile-content">I'm a
+                <i class="fa fa-code grey"> Programmer,</i>
+                <i class="fa fa-android green"> Android lover,</i>
+                <i class="fa fa-linux red"> Linux enthusiast &</i>
+                <i class="fa fa-globe blue"> Web hobbyist</i>
+            </p>
+            <p class="profile-content">
+                I enjoy software design and aspire to write beautiful code.
+                I also enjoy playing volley, occasional swimming and sporadic travels.
+            </p>
+            <p class="profile-content">
+                I think of myself as a self-evolving machine learning program, better yet, a self-aware neural network
+                but that's just some geeky philosophical side of me that's pretty much contained.
+            </p>
+        </md-card-content>
+    </md-card>
+
 </div>

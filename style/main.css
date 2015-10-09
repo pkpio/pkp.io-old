@@ -124,8 +124,14 @@ body{
 .menu-btn{
     min-width: 150px;
 }
+.max-content-width{
+    max-width: 700px;
+}
 
 /* About */
+#profile{
+    background-color: #3F51B5;
+}
 #profile-img {
      width: 180px;
      height: 180px;
@@ -134,18 +140,34 @@ body{
      -moz-border-radius: 150px;
 }
 #profile-name{
-    margin: 3px 5px 10px 5px;
-    color: grey;
+    margin: 12px 5px 0px 5px;
+    color: whitesmoke;
     font-weight: 500;
 }
+.profile-content{
+    font-size: 100%;
+    line-height: 1.5;
+}
 .profile-icon{
-    color: grey;
+    color: whitesmoke;
     cursor: pointer;
-    margin: 8px 20px;
+    margin: 8px 15px 2px 15px;
     text-decoration: none;
 }
 .profile-icon:hover{
-    color: #3F51B5;
+    color: #FE3F80;
+}
+.grey{
+    color: #5F7C8A;
+}
+.blue{
+    color: #3E50B4;
+}
+.green{
+    color: #4BAE4F;
+}
+.red{
+    color: #F34235;
 }
 
 /* Intro page */
@@ -156,6 +178,7 @@ body{
 .terminal{
     background-color: black;
     color: whitesmoke;
+    max-width: 450px;
 }
 .terminal-title{
     background-color: #3F51B5;
