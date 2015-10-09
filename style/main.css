@@ -82,12 +82,17 @@ a.work-title{
 }
 .timeline-maxwidth{
     /* Workaround */
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 /* General */
 body, html, .content-view{
     background-color: #FAFAFA;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
 }
 #loading{
     margin-top: 100px;
@@ -121,21 +126,26 @@ body, html, .content-view{
 }
 
 /* About */
-#profile{
-    width: 100%;
-    min-width: 200px;
-    background-color: #0077b3;
+#profile-img {
+     width: 180px;
+     height: 180px;
+     border-radius: 150px;
+     -webkit-border-radius: 150px;
+     -moz-border-radius: 150px;
 }
 #profile-name{
     margin: 3px 5px 10px 5px;
-    color: whitesmoke;
+    color: grey;
     font-weight: 500;
 }
 .profile-icon{
-    color: whitesmoke;
+    color: grey;
     cursor: pointer;
     margin: 8px 20px;
     text-decoration: none;
+}
+.profile-icon:hover{
+    color: #3F51B5;
 }
 
 /* Intro page */
