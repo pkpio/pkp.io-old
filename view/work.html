@@ -5,7 +5,7 @@
         <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
     </div>
 
-    <timeline layout-fill>
+    <timeline layout-fill class="timeline-maxwidth">
         <timeline-event ng-repeat="work in works">
 
             <!-- Badge -->
@@ -13,9 +13,7 @@
                 <span class="badge-text-info">{{work.year}}</span>
             </timeline-badge>
 
-            <!-- Work info -->
-            <timeline-panel class="{{ work.badgeClass }}">
-
+            <timeline-panel>
                 <!-- Company & Logo -->
                 <timeline-heading>
                     <h4 layout="row" layout-align="start center" layout-padding>
@@ -35,7 +33,6 @@
                         {{ work.duration }}
                     </p>
                 </span>
-
             </timeline-panel>
 
         </timeline-event>

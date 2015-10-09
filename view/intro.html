@@ -4,20 +4,30 @@
     <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
 </div>
 
-<div flex layout-padding layout="row" layout-align="center center" layout-filling>
+<div flex layout="row" layout-align="center center" class="pad-top">
 
-    <div flex="40" flex-md="60" flex-sm="100" style="margin-top: 15%;">
-        <code ng-repeat="message in messages track by $index"
-              class="intro-msg"
-              typewrite
-              type-delay="{{ params.typeDelay }}"
-              text=message
-              start=params.getStart($index)
-              initial-delay="{{ params.sentenceDelay }}"
-              callback-fn=params.doFinish($index)>
-        </code>
-        <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"
-           ng-show="ready"></i>
+    <!-- Terminal content -->
+    <div flex="40" flex-md="60" flex-sm="90" class="terminal" ng-show="ready">
+
+        <!-- Title -->
+        <div class="terminal-title" layout-align="center center" layout="row">
+            <code>guest@pkp.io:~/</code>
+        </div>
+
+        <!-- Content -->
+        <div class="terminal-content">
+            <code ng-repeat="message in messages track by $index"
+                  class="intro-msg"
+                  typewrite
+                  type-delay="{{ params.typeDelay }}"
+                  text=message
+                  start=params.getStart($index)
+                  initial-delay="{{ params.sentenceDelay }}"
+                  callback-fn=params.doFinish($index)>
+            </code>
+            <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"></i>
+        </div>
 
     </div>
+
 </div>

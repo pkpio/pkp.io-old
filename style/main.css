@@ -1,3 +1,4 @@
+/* Year colors */
 .year-Now{
     background-color: #4BAE4F !important;
 }
@@ -22,6 +23,8 @@
 .year-2008{
     background-color: #F34235 !important;
 }
+
+/* Project and work */
 .project-details, .work-details{
     font-size: 0.9em;
     line-height: 1.618em;
@@ -71,101 +74,20 @@ a.work-title{
 .badge-text-info{
     font-size: 0.7em;
 }
-.timeline li timeline-badge {
-    z-index: 30;
-}
 .timeline li {
     margin: 50px 0px;
 }
 .timeline-panel h4{
     margin: 0px 0px;
 }
-.intro-msg{
-
+.timeline-maxwidth{
+    /* Workaround */
+    max-width: 1200px;
 }
+
+/* General */
 body, html, .content-view{
     background-color: #FAFAFA;
-}
-#profile{
-    width: 100%;
-    min-width: 200px;
-    background-color: #0077b3;
-}
-#profile-name{
-    margin: 3px 5px 10px 5px;
-    color: whitesmoke;
-    font-weight: 500;
-}
-.profile-icon{
-    color: whitesmoke;
-    cursor: pointer;
-    margin: 8px 20px;
-    text-decoration: none;
-}
-.menu-icon{
-    margin: 0px;
-    padding: 5px 20px 5px 20px;
-    width: 70px;
-}
-.menu-item{
-    margin: 0px;
-    padding: 8px 20px 8px 8px;
-    color: grey;
-}
-.full-area{
-    width: 100%;
-    height: 100%;
-}
-.circular {
-    width: 180px;
-    height: 180px;
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-}
-.menu-wrapper{
-    position: absolute;
-    z-index: 300;
-}
-.menu {
-    cursor: pointer;
-    position: relative;
-    width: 35px;
-    height: 35px;
-    outline-color: transparent;
-    margin: 10px;
-}
-.menu-global {
-    backface-visibility: hidden;
-    position: absolute;
-    left: 0;
-    border-top: 2px solid deeppink;
-    width: 100%;
-    transition: 0.35s;
-}
-.menu-top {
-    top: 6px;
-}
-.menu-middle {
-    top: 18px;
-}
-.menu-bottom {
-    top: 30px;
-}
-.menu-top.active {
-    backface-visibility: hidden;
-    top: 15px;
-    transform: rotate(45deg);
-    transition: 0.5s;
-}
-.menu-middle.active {
-    opacity: 0;
-}
-.menu-bottom.active {
-    backface-visibility: hidden;
-    top: 15px;
-    transform: rotate(-45deg);
-    transition: 0.5s;
 }
 #loading{
     margin-top: 100px;
@@ -191,6 +113,32 @@ body, html, .content-view{
     left: -10px;
     color: #FEC006;
 }
+.pad-top{
+    padding-top: 40px;
+}
+.menu-btn{
+    min-width: 150px;
+}
+
+/* About */
+#profile{
+    width: 100%;
+    min-width: 200px;
+    background-color: #0077b3;
+}
+#profile-name{
+    margin: 3px 5px 10px 5px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+.profile-icon{
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 8px 20px;
+    text-decoration: none;
+}
+
+/* Intro page */
 .cursor{
     position: relative;
     left: -4px;

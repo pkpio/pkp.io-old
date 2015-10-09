@@ -2,6 +2,7 @@
 <html lang="en" ng-app="PraveenApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1" />
 
     <!-- CSS libs -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
@@ -11,28 +12,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/main.css"/>
-
-    <meta name="viewport" content="initial-scale=1" />
     <title>Praveen</title>
 </head>
+
 <body ng-controller="AppCtrl">
 
     <!-- Toolbar -->
     <md-toolbar layout="row" layout-align="center end" layout-wrap>
-        <md-button ng-repeat="menu in menuItems" ng-href="{{menu.url}}">
+        <md-button ng-repeat="menu in menuItems" ng-href="{{menu.url}}" class="menu-btn">
             <i class="fa {{menu.class}}"></i> {{menu.text}}
         </md-button>
     </md-toolbar>
 
     <!-- Content -->
     <div flex layout="row" layout-align="center center" class="content-view">
-        <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column" layout-fill></div>
+        <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column"></div>
     </div>
 
-<!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-
 <!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
@@ -47,5 +45,6 @@
 <script src="js/academics.js"></script>
 <script src="js/project.js"></script>
 <script src="js/work.js"></script>
+
 </body>
 </html>
