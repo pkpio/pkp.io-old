@@ -95,7 +95,7 @@ body{
     overflow-y: scroll;
 }
 #loading{
-    margin-top: 100px;
+    margin: 100px 0px;
     min-height: 100px;
 }
 #loading-cog1{
@@ -161,7 +161,7 @@ body{
     color: #5F7C8A;
 }
 .blue{
-    color: #3E50B4;
+    color: #02A8F3;
 }
 .green{
     color: #4BAE4F;
