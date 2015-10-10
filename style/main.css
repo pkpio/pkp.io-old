@@ -191,3 +191,35 @@ body{
     padding: 8px;
     min-height: 300px;
 }
+
+/* Footer */
+.footer{
+    position: relative;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #767676;
+    border-top: 1px solid #eee;
+}
+.footer a {
+    color: #767676;
+    text-decoration: none;
+    padding-left: 40px;
+}
+.author a{
+    padding-left: 10px;
+    color: #767676;
+}
+.footer a:hover, a:active {
+    text-decoration: underline;
+}
+.passengers{
+    border-bottom: grey solid 2px;
+    min-width: 40px;
+}
+.car{
+    position: relative;
+    top: -1px;
+}
