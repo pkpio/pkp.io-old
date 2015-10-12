@@ -130,6 +130,9 @@ body{
 .max-content-width{
     max-width: 700px;
 }
+.no-decoration{
+    text-decoration: none !important;
+}
 
 /* About */
 .title-block {
