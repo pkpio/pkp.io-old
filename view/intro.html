@@ -7,11 +7,13 @@
 <div flex layout="row" layout-align="center center" class="pad-top">
 
     <!-- Terminal -->
-    <div flex="40" flex-md="60" flex-sm="90" class="terminal" ng-show="ready">
+    <md-card flex="40" flex-md="60" flex-sm="90" class="terminal" ng-show="ready">
 
         <!-- Title -->
-        <div class="terminal-title" layout-align="center center" layout="row">
+        <div class="terminal-title" layout-align="space-between center" layout="row">
+            <i class="fa fa-terminal"></i>
             <code>guest@pkp.io:~/</code>
+            <i class="fa fa-times-circle"></i>
         </div>
 
         <!-- Content -->
@@ -28,6 +30,6 @@
             <i class="fa fa-i-cursor cursor {{params.allDone ? 'blink' : ''}}"></i>
         </div>
 
-    </div>
+    </md-card>
 
 </div>

@@ -226,15 +226,15 @@ tr.skill-set > td {
     left: -4px;
 }
 .terminal{
-    background-color: black;
-    color: whitesmoke;
+    background-color: white;
+    color: black;
     max-width: 450px !important;
 }
 .terminal-title{
     background-color: #3F51B5;
     color: whitesmoke;
-    padding: 5px;
-    font-weight: 800;
+    padding: 10px;
+    font-weight: 600;
     font-size: 14px;
 }
 .terminal-content{
