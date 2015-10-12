@@ -176,23 +176,45 @@ body{
 .red{
     color: #F34235;
 }
-.daily-use{
-    background-color: #C8E6C9;
-}
-.daily-use:hover{
+.daily-use:hover, .daily-use-exp, .daily-use-exp:hover{
+    color: whitesmoke;
     background-color: #43A047;
 }
-.moderate{
-    background-color: #B3E5FC;
-}
-.moderate:hover{
+.moderate:hover, .moderate-exp, .moderate-exp:hover{
+    color: whitesmoke;
     background-color: #039BE5;
 }
-.beginner{
-    background-color: #FFCDD2;
-}
-.beginner:hover{
+.beginner:hover, .beginner-exp, .beginner-exp:hover{
+    color: whitesmoke;
     background-color: #F44336;
+}
+.skill-level-exp{
+    font-size: 13px;
+}
+.full-width{
+    width: 100%;
+}
+.skill-notation{
+    padding: 10px;
+}
+table{
+    border-collapse: collapse;
+}
+.skill-set{
+    border-bottom: 1px solid #EEEEEE;
+}
+tr.skill-set > td {
+    padding: 10px 0em;
+}
+.skill-set-icon{
+    width: 20px;
+    padding-left: 12px;
+}
+.skill-set-title{
+    padding-right: 12px !important;
+}
+.font-13{
+    font-size: 13px;
 }
 
 /* Intro page */

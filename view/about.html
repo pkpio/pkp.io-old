@@ -34,9 +34,9 @@
 
             <md-card-content layout-align="center center" layout="column">
                 <table>
-                    <tr ng-repeat="skillset in profile.skillsets">
-                        <td><i class="fa {{ skillset.icon }}"></i></td>
-                        <td>{{ skillset.type}}</td>
+                    <tr ng-repeat="skillset in profile.skillsets" class="skill-set">
+                        <td><i class="fa {{ skillset.icon }} skill-set-icon"></i></td>
+                        <td class="skill-set-title">{{ skillset.type}}</td>
                         <td layout="row" layout-wrap>
                             <span ng-repeat="skill in skillset.skills" class="{{ skill.level }} skill-item">
                                 {{ skill.skill }}
@@ -44,6 +44,18 @@
                         </td>
                     </tr>
                 </table>
+                <div layout="row" layout-wrap layout-align="start center" class="full-width skill-notation">
+                    <span class="font-13">Notation: </span>
+                    <div class="skill-level-exp" layout="row" layout-align="center center">
+                        <span class="skill-item daily-use-exp">Experienced</span>
+                    </div>
+                    <div class="skill-level-exp" layout="row" layout-align="center center">
+                        <span class="skill-item moderate-exp">Moderate</span>
+                    </div>
+                    <div class="skill-level-exp" layout="row" layout-align="center center">
+                        <span class="skill-item beginner-exp">Beginner</span>
+                    </div>
+                </div>
             </md-card-content>
         </md-card>
 

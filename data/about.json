@@ -25,9 +25,47 @@
   ],
   "skillsets": [
     {
+      "type": "Platforms",
+      "icon": "fa-rocket",
+      "skills": [
+        {
+          "skill": "Linux",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Windows",
+          "level": "daily-use"
+        },
+        {
+          "skill": "OSX",
+          "level": "beginner"
+        },
+        {
+          "skill": "Google App Engine",
+          "level": "moderate"
+        }
+      ]
+    },
+    {
       "type": "Languages",
       "icon": "fa-language",
       "skills": [
+        {
+          "skill": "C",
+          "level": "beginner"
+        },
+        {
+          "skill": "Kernel C",
+          "level": "moderate"
+        },
+        {
+          "skill": "C++",
+          "level": "moderate"
+        },
+        {
+          "skill": "C#",
+          "level": "beginner"
+        },
         {
           "skill": "Java",
           "level": "daily-use"
@@ -41,20 +79,16 @@
           "level": "daily-use"
         },
         {
-          "skill": "C",
-          "level": "moderate"
-        },
-        {
-          "skill": "C++",
-          "level": "moderate"
-        },
-        {
-          "skill": "C#",
-          "level": "beginner"
-        },
-        {
           "skill": "Python",
           "level": "beginner"
+        },
+        {
+          "skill": "Shell",
+          "level": "moderate"
+        },
+        {
+          "skill": "Verilog",
+          "level": "daily-use"
         }
       ]
     },
@@ -75,27 +109,15 @@
           "level": "daily-use"
         },
         {
-          "skill": "Material Design",
+          "skill": "REST APIs",
           "level": "daily-use"
-        },
-        {
-          "skill": "FontAwesome",
-          "level": "daily-use"
-        },
-        {
-          "skill": "JQuery",
-          "level": "beginner"
         },
         {
           "skill": "Bootstrap",
-          "level": "beginner"
+          "level": "moderate"
         },
         {
-          "skill": "Jekyll",
-          "level": "beginner"
-        },
-        {
-          "skill": "Slim",
+          "skill": "MVC frameworks",
           "level": "moderate"
         }
       ]
@@ -121,16 +143,82 @@
           "level": "daily-use"
         },
         {
-          "skill": "Play Services",
+          "skill": "Play Services & APIs",
+          "level": "daily-use"
+        }
+      ]
+    },
+    {
+      "type": "Databases",
+      "icon": "fa-database",
+      "skills": [
+        {
+          "skill": "MySql",
           "level": "daily-use"
         },
         {
-          "skill": "Play Games",
+          "skill": "MongoDb",
+          "level": "beginner"
+        },
+        {
+          "skill": "Hibernate",
+          "level": "beginner"
+        },
+        {
+          "skill": "ORMs",
+          "level": "moderate"
+        }
+      ]
+    },
+    {
+      "type": "Other tools",
+      "icon": "fa-cogs",
+      "skills": [
+        {
+          "skill": "Git",
           "level": "daily-use"
         },
         {
-          "skill": "In app billing",
+          "skill": "SVN",
           "level": "daily-use"
+        },
+        {
+          "skill": "Asterisk",
+          "level": "moderate"
+        },
+        {
+          "skill": "Xilinx ISE",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Jekyll",
+          "level": "beginner"
+        }
+      ]
+    },
+    {
+      "type": "Hardware",
+      "icon": "fa-tv",
+      "skills": [
+        {
+          "skill": "80xx Micro controllers",
+          "level": "moderate"
+        },
+        {
+          "skill": "Xilinx Virtex 5/6 FPGAs",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Altera De0nano",
+          "level": "beginner"
+        },
+        {
+          "skill": "Beaglebone",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Raspberry Pi",
+          "level": "moderate"
         }
       ]
     }
