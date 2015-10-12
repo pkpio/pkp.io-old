@@ -1,1 +1,138 @@
-[]
+{
+  "name": "Praveen Kumar Pendyala",
+  "links": [
+    {
+      "icon": "fa-facebook-square",
+      "url": "https://www.facebook.com/pamarru"
+    },
+    {
+      "icon": "fa-google-plus-square",
+      "url": "https://plus.google.com/+PraveenKumarPendyala"
+    },
+    {
+      "icon": "fa-linkedin-square",
+      "url": "https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"
+    },
+    {
+      "icon": "fa-github-square",
+      "url": "https://github.com/praveendath92"
+    }
+  ],
+  "about": [
+    "<i class='fa fa-code grey'> Programmer</i> <i class='fa fa-linux red'> Linux enthusiast</i> <i class='fa fa-android green'> Android lover</i> <i class='fa fa-globe blue'> Web hobbyist</i>",
+    "I'm a masters student at TU Darmstadt and a part time researcher at CASED. I enjoy playing volley, occasional swimming and sporadic travels.",
+    "I explore codes of popular repositories to discover new tools and practices. I have a growing obsession for beautiful code and sometimes piss off people in the process."
+  ],
+  "skillsets": [
+    {
+      "type": "Languages",
+      "icon": "fa-language",
+      "skills": [
+        {
+          "skill": "Java",
+          "level": "daily-use"
+        },
+        {
+          "skill": "PHP",
+          "level": "daily-use"
+        },
+        {
+          "skill": "JavaScript",
+          "level": "daily-use"
+        },
+        {
+          "skill": "C",
+          "level": "moderate"
+        },
+        {
+          "skill": "C++",
+          "level": "moderate"
+        },
+        {
+          "skill": "C#",
+          "level": "beginner"
+        },
+        {
+          "skill": "Python",
+          "level": "beginner"
+        }
+      ]
+    },
+    {
+      "type": "Web",
+      "icon": "fa-firefox",
+      "skills": [
+        {
+          "skill": "HTML5",
+          "level": "moderate"
+        },
+        {
+          "skill": "CSS3",
+          "level": "moderate"
+        },
+        {
+          "skill": "AngularJs",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Material Design",
+          "level": "daily-use"
+        },
+        {
+          "skill": "FontAwesome",
+          "level": "daily-use"
+        },
+        {
+          "skill": "JQuery",
+          "level": "beginner"
+        },
+        {
+          "skill": "Bootstrap",
+          "level": "beginner"
+        },
+        {
+          "skill": "Jekyll",
+          "level": "beginner"
+        },
+        {
+          "skill": "Slim",
+          "level": "moderate"
+        }
+      ]
+    },
+    {
+      "type": "Android",
+      "icon": "fa-android",
+      "skills": [
+        {
+          "skill": "Retrofit",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Volley",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Picasso",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Material Design",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Play Services",
+          "level": "daily-use"
+        },
+        {
+          "skill": "Play Games",
+          "level": "daily-use"
+        },
+        {
+          "skill": "In app billing",
+          "level": "daily-use"
+        }
+      ]
+    }
+  ]
+}
