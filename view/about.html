@@ -1,34 +1,52 @@
-<div layout-align="center center" layout="column" class="pad-top">
+<div flex="100" layout="column" layout-align="center center">
 
-    <!-- Profile card -->
-    <md-card class="max-content-width">
-        <div layout="column" layout-padding layout-align="center center" id="profile">
-            <img id="profile-img" src="img/praveen.jpg"/>
-            <p id="profile-name">Praveen Kumar Pendyala</p>
-            <div layout="row" layout-align="center center" layout-padding>
-                <a class="fa fa-lg fa-fw profile-icon fa-facebook-square" href="https://www.facebook.com/pamarru"></a>
-                <a class="fa fa-lg fa-fw profile-icon fa-google-plus-square" href="https://plus.google.com/+PraveenKumarPendyala/"></a>
-                <a class="fa fa-lg fa-fw profile-icon fa-linkedin-square" href="https://in.linkedin.com/pub/praveen-kumar-pendyala/31/765/534"></a>
-                <a class="fa fa-lg fa-fw profile-icon fa-github-square" href="https://github.com/praveendath92"></a>
+    <div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
+        <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
+        <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
+    </div>
+
+    <div layout-align="center center" layout="column" class="pad-top" ng-show="ready">
+
+        <!-- Profile card -->
+        <md-card class="max-content-width">
+
+            <div layout="column" layout-padding layout-align="center center" class="title-block">
+                <img id="profile-img" src="img/praveen.jpg"/>
+                <p id="profile-name">{{ profile.name }}</p>
+                <div layout="row" layout-align="center center" layout-padding>
+                    <a ng-repeat="link in profile.links"
+                       class="fa fa-lg fa-fw profile-icon {{ link.icon }}" ng-href="{{ link.url }}"></a>
+                </div>
             </div>
-        </div>
 
-        <md-card-content layout-align="center center" layout="column">
-            <p class="profile-content">I'm a
-                <i class="fa fa-code grey"> Programmer,</i>
-                <i class="fa fa-linux red"> Linux enthusiast,</i>
-                <i class="fa fa-android green"> Android lover,</i>
-                <i class="fa fa-globe blue"> Web hobbyist.</i>
-            </p>
-            <p class="profile-content">
-                I enjoy software design and aspire to write beautiful code.
-                I also enjoy playing volley, occasional swimming and sporadic travels.
-            </p>
-            <p class="profile-content">
-                I think of myself as a self-evolving machine learning program, better yet, a self-aware neural network
-                but that's just some geeky philosophical side of me that's pretty much contained.
-            </p>
-        </md-card-content>
-    </md-card>
+            <md-card-content layout-align="center center" layout="column">
+                <p ng-repeat="about in profile.about" class="profile-content" ng-bind-html="renderHtml(about)"></p>
+            </md-card-content>
+        </md-card>
+
+        <!-- Skills card -->
+        <md-card class="max-content-width">
+
+            <div layout="column" layout-align="center center" class="title-block">
+                <h4 class="white-text"><i class="fa fa-user-secret"></i> SKILLS</h4>
+            </div>
+
+            <md-card-content layout-align="center center" layout="column">
+                <table>
+                    <tr ng-repeat="skillset in profile.skillsets">
+                        <td><i class="fa {{ skillset.icon }}"></i></td>
+                        <td>{{ skillset.type}}</td>
+                        <td layout="row" layout-wrap>
+                            <span ng-repeat="skill in skillset.skills" class="{{ skill.level }} skill-item">
+                                {{ skill.skill }}
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </md-card-content>
+        </md-card>
+
+    </div>
 
 </div>

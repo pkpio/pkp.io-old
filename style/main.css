@@ -58,12 +58,15 @@ a.work-title{
     margin-left: 20px;
     color: #666666;
 }
+.margin-top{
+    margin-top: 4px;
+}
 .skill-item {
     padding: 8px;
     background: #f0f0f0;
     border-radius: 4px;
     box-sizing: border-box;
-    margin: 8px 8px 0px 0px;
+    margin: 4px;
     cursor: pointer;
     font-size: 0.7em;
 }
@@ -129,7 +132,7 @@ body{
 }
 
 /* About */
-#profile{
+.title-block {
     background-color: #3F51B5;
 }
 #profile-img {
@@ -147,6 +150,7 @@ body{
 .profile-content{
     font-size: 100%;
     line-height: 1.5;
+    text-align: center;
 }
 .profile-icon{
     color: whitesmoke;
@@ -156,6 +160,9 @@ body{
 }
 .profile-icon:hover{
     color: #FE3F80;
+}
+.white-text{
+    color:whitesmoke;
 }
 .grey{
     color: #5F7C8A;
@@ -168,6 +175,15 @@ body{
 }
 .red{
     color: #F34235;
+}
+.daily-use{
+    background-color: #C8E6C9;
+}
+.moderate{
+    background-color: #B3E5FC;
+}
+.beginner{
+    background-color: #FFCDD2;
 }
 
 /* Intro page */
@@ -218,8 +234,10 @@ body{
 .passengers{
     border-bottom: grey solid 2px;
     min-width: 40px;
+    position: relative;
+    top: -5px;
 }
 .car{
     position: relative;
-    top: -1px;
+    top: -6px;
 }
