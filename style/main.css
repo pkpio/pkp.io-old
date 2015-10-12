@@ -179,11 +179,20 @@ body{
 .daily-use{
     background-color: #C8E6C9;
 }
+.daily-use:hover{
+    background-color: #43A047;
+}
 .moderate{
     background-color: #B3E5FC;
 }
+.moderate:hover{
+    background-color: #039BE5;
+}
 .beginner{
     background-color: #FFCDD2;
+}
+.beginner:hover{
+    background-color: #F44336;
 }
 
 /* Intro page */
