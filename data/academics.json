@@ -2,25 +2,29 @@
   {
     "year": "Now",
     "degree": "Masters in Distributed Software Systems",
-    "place": "Technische Universität Darmstadt",
-    "grade": "??"
+    "school": "Technische Universität",
+    "place" : "Darmstadt, Germany",
+    "duration" : "November 2014 - Present"
   },
   {
     "year": "2014",
     "degree": "Bachelors in Electrical Engineering",
-    "place": "Indian Institute of Technology Bombay",
-    "grade": "?/10"
+    "school": "Indian Institute of Technology Bombay",
+    "place" : "Mumbai, India",
+    "duration" : "July 2010 - August 2014"
   },
   {
     "year": "2010",
-    "degree": "Higher Secondary examination",
-    "place": "Vijaya Ratna Junior college, Hyderabad",
-    "grade": "94.8%"
+    "degree": "Higher Secondary",
+    "school": "Vijaya Ratna Junior college",
+    "place" : "Hyderabad, India",
+    "duration" : "2008 - 2010"
   },
   {
     "year": "2008",
-    "degree": "Secondary School examination",
-    "place": "Gowtham Model School, Rajahmundry",
-    "grade": "90.3%"
+    "degree": "Secondary School",
+    "school": "Gowtham Model School",
+    "place" : "Rajahmundry, India",
+    "duration" : "2006 - 2008"
   }
 ]

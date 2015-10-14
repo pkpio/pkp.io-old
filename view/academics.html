@@ -11,12 +11,24 @@
             <timeline-badge class="year-{{ study.year }}">
                 <span class="badge-text-info">{{study.year}}</span>
             </timeline-badge>
+
             <timeline-panel class="{{event.badgeClass}}">
                 <timeline-heading>
                     <p><i class="fa fa-graduation-cap fa-fw"></i> {{study.degree}}</p>
                 </timeline-heading>
-                <p><i class="fa fa-university fa-fw"></i> {{study.place}}</p>
-                <p><i class="fa fa-file-text fa-fw"></i> {{study.grade}}</p>
+
+                <p>
+                    <i class="fa fa-university fa-fw"></i>
+                    {{ study.school }}
+                </p>
+                <p>
+                    <i class="fa fa-map-marker fa-fw"></i>
+                    {{ study.place }}
+                </p>
+                <p>
+                    <i class="fa fa-clock-o fa-fw"></i>
+                    {{ study.duration }}
+                </p>
             </timeline-panel>
         </timeline-event>
     </timeline>

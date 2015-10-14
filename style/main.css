@@ -25,7 +25,7 @@
 }
 
 /* Project and work */
-.project-details, .work-details{
+.project-details, .work-details, .study-details{
     font-size: 0.9em;
     line-height: 1.618em;
     margin-bottom: 1.618em;
@@ -52,7 +52,7 @@ a.work-title{
     text-decoration: none;
     color: inherit;
 }
-.work-info-icon{
+.work-info-icon, .study-info-icon{
     font-size: 1.5em;
     margin-right: 10px;
     margin-left: 20px;
