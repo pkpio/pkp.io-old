@@ -20,9 +20,14 @@
                 </div>
             </div>
 
-            <md-card-content layout-align="center center" layout="column">
+            <md-card-content layout-align="center center" layout="column" class="no-bottom-pad">
                 <p ng-repeat="about in profile.about" class="profile-content" ng-bind-html="renderHtml(about)"></p>
             </md-card-content>
+            <div flex layout="column">
+                <md-button flex="100" class="resume-btn" ng-href="https://github.com/praveendath92/resume/raw/master/onepage/cv.pdf">
+                    <i class="fa fa-file-pdf-o"></i> Resume
+                </md-button>
+            </div>
         </md-card>
 
         <!-- Skills card -->

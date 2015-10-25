@@ -219,6 +219,14 @@ tr.skill-set > td {
 .font-13{
     font-size: 13px;
 }
+.resume-btn{
+    color: #3F51B5;
+    margin: 0px;
+    padding: 4px;
+}
+.no-bottom-pad{
+    padding: 10px 10px 0px 10px;
+}
 
 /* Intro page */
 .cursor{
