@@ -19,7 +19,7 @@
     }
   ],
   "about": [
-    "<i class='fa fa-code grey'> Programmer</i> <i class='fa fa-linux red'> Linux enthusiast</i> <i class='fa fa-android green'> Android lover</i> <i class='fa fa-globe blue'> Web hobbyist</i>",
+    "<i class='fa fa-android green'> Android developer</i> | <i class='fa fa-linux red'> Linux enthusiast</i> | <i class='fa fa-globe blue'> Web hobbyist</i>",
     "I'm a masters student at TU Darmstadt and a part time researcher at CASED. I enjoy playing volley, occasional swimming and sporadic travels.",
     "I explore codes of popular repositories to discover new tools and practices. I have a growing obsession for beautiful code and sometimes piss off people in the process."
   ],

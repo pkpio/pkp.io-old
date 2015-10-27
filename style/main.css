@@ -219,6 +219,10 @@ tr.skill-set > td {
 .font-13{
     font-size: 13px;
 }
+.resume-wrapper{
+    border-top: dashed #DDDDDD 1px;
+    margin-top: 4px;
+}
 .resume-btn{
     color: #3F51B5;
     margin: 0px;
@@ -236,7 +240,7 @@ tr.skill-set > td {
 .terminal{
     background-color: white;
     color: black;
-    max-width: 450px !important;
+    max-width: 400px !important;
 }
 .terminal-title{
     background-color: #3F51B5;
@@ -247,7 +251,7 @@ tr.skill-set > td {
 }
 .terminal-content{
     padding: 8px;
-    min-height: 300px;
+    min-height: 250px;
 }
 
 /* Footer */
