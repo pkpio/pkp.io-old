@@ -24,7 +24,7 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/about.html',
             controller  : 'AboutCtrl'
         })
-        .when('/academics',{
+        .when('/studies',{
             templateUrl : 'view/academics.html',
             controller  : 'AcadCtrl'
         })
@@ -51,8 +51,8 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
         },
         {
             class: "fa-graduation-cap",
-            text: "Academics",
-            url: "#/academics"
+            text: "Studies",
+            url: "#/studies"
         },
         {
             class: "fa-coffee",
