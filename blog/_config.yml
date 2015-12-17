@@ -11,7 +11,7 @@ author: Praveen Kumar
 author_email: m@praveen.xyz
 
 # The directory for category index pages
-category_dir: category/
+category_dir: categories/
 
 # Uncomment if you are planning to run the blog in a subdirectory
 # Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.
@@ -20,7 +20,7 @@ category_dir: category/
 baseurl: 
 
 # The URL of your actual domain.
-url: https://pkp.io/blog/
+url: https://pkp.io
 
 # Destination url
 destination: _site/
@@ -34,7 +34,7 @@ markdown: rdiscount
 
 # Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
 # Unfortunately .json exention is not supported by jekyll :(
-permalink: /:year/:title
+permalink: /:year/:title/
 
 # How many articles do you wish to appear on the front page:
 #paginate: 5
