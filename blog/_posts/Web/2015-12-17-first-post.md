@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First post
-categories: Web
+categories: [Web]
 excerpt: Startibg a new blog, again!
 ---
 

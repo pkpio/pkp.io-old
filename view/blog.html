@@ -1,0 +1,27 @@
+<div flex="100" layout="column" layout-align="center center">
+
+    <ng-include src="'view/loading.html'"></ng-include>
+
+    <timeline layout-fill class="timeline-maxwidth">
+        <timeline-event ng-repeat="post in posts">
+            <timeline-badge class="year-{{ post.date }}">
+                <span class="badge-text-info">{{study.date}}</span>
+            </timeline-badge>
+
+            <timeline-panel class="{{event.badgeClass}}">
+                <timeline-heading>
+                    <p><i class="fa fa-pencil fa-fw"></i> {{post.title}}</p>
+                </timeline-heading>
+
+                <p>
+                    <i class="fa fa-university fa-fw"></i>
+                    {{ post.url }}
+                </p>
+                <p>
+                    <i class="fa fa-map-marker fa-fw"></i>
+                    {{ post.excerpt }}
+                </p>
+            </timeline-panel>
+        </timeline-event>
+    </timeline>
+</div>
