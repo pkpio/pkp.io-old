@@ -67,11 +67,11 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
             class: "fa-code",
             text: "Projects",
             url: "#/projects"
-        },
+        }/*,
         {
             class: "fa-pencil",
             text: "Blog",
             url: "#/blog"
-        }
+        }*/
     ];
 });
