@@ -1,0 +1,19 @@
+<div flex="100" layout="column" layout-align="center center">
+
+    <ng-include src="'view/loading.html'"></ng-include>
+
+
+    <div layout-align="center center" layout="column" class="pad-top" ng-show="ready">
+
+        <md-card>
+            <div layout="column" layout-align="center center" class="title-block">
+                <h4 class="white-text">{{ post.title }}</h4>
+            </div>
+
+            <md-card-content layout-align="center center" layout="column" class="no-bottom-pad">
+                <div btf-markdown="post.content">
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

@@ -2,7 +2,7 @@
  * Created by praveen on 12.09.15.
  */
 
-angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite']);
+angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite', 'btford.markdown']);
 
 // Theme setup
 angular.module('PraveenApp').config(function($mdThemingProvider) {
@@ -40,6 +40,10 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/blog.html',
             controller  : 'BlogCtrl'
         })
+        .when('/blog/:posturl*\/',{
+            templateUrl : 'view/post.html',
+            controller  : 'BlogPostCtrl'
+        })
         .otherwise({
             templateUrl : 'view/intro.html',
             controller  : 'IntroCtrl'
@@ -67,11 +71,11 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
             class: "fa-code",
             text: "Projects",
             url: "#/projects"
-        }/*,
+        },
         {
             class: "fa-pencil",
             text: "Blog",
             url: "#/blog"
-        }*/
+        }
     ];
 });
