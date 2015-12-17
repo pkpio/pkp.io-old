@@ -7,12 +7,28 @@
 
         <md-card>
             <div layout="column" layout-align="center center" class="title-block">
-                <h4 class="white-text">{{ post.title }}</h4>
+                <h3 class="post-title"><i class="fa fa-pencil"></i> {{ post.title }}</h3>
+
+                <div layout="row" layout-align="space-between" layout-fill>
+
+                    <!-- Time stamp -->
+                    <div layout="row" layout-wrap layout-align="center center" class="post-date" flex-sm="40">
+                        <i class="fa fa-calendar"> &nbsp;</i>
+                        <span layout-align="center center"> {{ extractDay(post.date) }} {{ extractMonth(post.date) }},
+                            {{ extractYear(post.date) }}</span>
+                    </div>
+
+                    <!-- Categories -->
+                    <div layout="row" layout-wrap layout-align="center center" flex-sm="60">
+                        <span class="post-tag-item" ng-repeat="cat in post.categories">
+                            <i class="fa fa-tag"></i> {{ cat }}
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <md-card-content layout-align="center center" layout="column" class="no-bottom-pad">
-                <div btf-markdown="post.content">
-                </div>
+                <div class="blog-post-content" ng-bind-html="renderHtml(post.content)"></div>
             </md-card-content>
         </md-card>
     </div>

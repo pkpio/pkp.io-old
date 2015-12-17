@@ -1,7 +1,7 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeout, config, $http, $routeParams) {
+angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeout, config, $http, $routeParams, $sce) {
     $scope.post = null;
     $scope.ready = 0;
 
@@ -27,12 +27,20 @@ angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeou
     // Delayed call to avoid navbar freeze on close
     $timeout($scope.loadData, config.loadDelay);
 
+    $scope.renderHtml = function (htmlCode) {
+        return $sce.trustAsHtml(htmlCode);
+    };
+
     $scope.extractDay = function(dateStr){
+        if(!dateStr)
+            return;
         var items = dateStr.split("-");
         return items[2].substr(0, 2);
     };
 
     $scope.extractMonth = function(dateStr){
+        if(!dateStr)
+            return;
         var items = dateStr.split("-");
         switch (parseInt(items[1])){
             case 1:
@@ -64,6 +72,8 @@ angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeou
     };
 
     $scope.extractYear = function(dateStr){
+        if(!dateStr)
+            return;
         var items = dateStr.split("-");
         return items[0];
     };
