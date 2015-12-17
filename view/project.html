@@ -1,9 +1,6 @@
 <div flex layout="column" layout-align="center center">
-    <div flex layout-align="center center" layout="row" id="loading" ng-show="!ready">
-        <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
-        <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
-        <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
-    </div>
+
+    <ng-include src="'view/loading.html'"></ng-include>
 
     <timeline>
         <timeline-event ng-repeat="project in projects">

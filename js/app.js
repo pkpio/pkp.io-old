@@ -36,6 +36,10 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/project.html',
             controller  : 'ProjectCtrl'
         })
+        .when('/blog',{
+            templateUrl : 'view/blog.html',
+            controller  : 'BlogCtrl'
+        })
         .otherwise({
             templateUrl : 'view/intro.html',
             controller  : 'IntroCtrl'
@@ -63,6 +67,11 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
             class: "fa-code",
             text: "Projects",
             url: "#/projects"
+        },
+        {
+            class: "fa-pencil",
+            text: "Blog",
+            url: "#/blog"
         }
     ];
 });
