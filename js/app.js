@@ -2,7 +2,7 @@
  * Created by praveen on 12.09.15.
  */
 
-angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite', 'btford.markdown']);
+angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite']);
 
 // Theme setup
 angular.module('PraveenApp').config(function($mdThemingProvider) {
