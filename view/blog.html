@@ -1,27 +1,52 @@
-<div flex="100" layout="column" layout-align="center center">
+<div flex="100" layout="row" layout-align="center center">
 
     <ng-include src="'view/loading.html'"></ng-include>
 
-    <timeline layout-fill class="timeline-maxwidth">
-        <timeline-event ng-repeat="post in posts">
-            <timeline-badge class="year-{{ post.date }}">
-                <span class="badge-text-info">{{study.date}}</span>
-            </timeline-badge>
+    <div layout-align="center center" layout="column" class="pad-top" ng-show="ready" layout-fill>
 
-            <timeline-panel class="{{event.badgeClass}}">
-                <timeline-heading>
-                    <p><i class="fa fa-pencil fa-fw"></i> {{post.title}}</p>
-                </timeline-heading>
+        <!-- Posts -->
+        <div layout="column" class="blog-list">
 
-                <p>
-                    <i class="fa fa-university fa-fw"></i>
-                    {{ post.url }}
-                </p>
-                <p>
-                    <i class="fa fa-map-marker fa-fw"></i>
-                    {{ post.excerpt }}
-                </p>
-            </timeline-panel>
-        </timeline-event>
-    </timeline>
+            <div layout="row" class="blog-list-post">
+                <!-- Time stamp -->
+                <div class="blog-list-date" flex-sm="25" flex-md="20" flex="15" layout="column"
+                     layout-align="center center">
+                    <div class="blog-list-day-month">SEP 24</div>
+                    <div class="blog-list-year">2015</div>
+                </div>
+
+                <div layout="column" flex-sm="75" flex-md="80" flex="85">
+                    <!-- Title -->
+                    <div class="blog-list-title">New blog design for new beginnings!</div>
+
+                    <!-- Excerpt -->
+                    <div class="blog-list-excerpt">Some sample content about the post goes here. This is only for the
+                        post design to get things started. What ever goes here is dumb text!
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row" class="blog-list-post">
+                <!-- Time stamp -->
+                <div class="blog-list-date" flex-sm="25" flex-md="20" flex="15" layout="column"
+                     layout-align="center center">
+                    <div class="blog-list-day-month">SEP 24</div>
+                    <div class="blog-list-year">2015</div>
+                </div>
+
+                <div layout="column" flex-sm="75" flex-md="80" flex="85">
+                    <!-- Title -->
+                    <div class="blog-list-title">New blog design for new beginnings!</div>
+
+                    <!-- Excerpt -->
+                    <div class="blog-list-excerpt">Some sample content about the post goes here. This is only for the
+                        post design to get things started. What ever goes here is dumb text!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
 </div>

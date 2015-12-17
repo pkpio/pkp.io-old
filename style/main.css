@@ -254,6 +254,30 @@ tr.skill-set > td {
     min-height: 250px;
 }
 
+/* Blog */
+.blog-list{
+    max-width: 750px;
+}
+.blog-list-post{
+    padding: 24px;
+}
+.blog-list-day-month{
+    font-size: 16px;
+}
+.blog-list-year{
+    font-size: 13px;
+}
+.blog-list-title{
+    font-size: 20px;
+    color: #3F51B5;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+.blog-list-excerpt{
+    font-size: 100%;
+    line-height: 1.5;
+}
+
 /* Footer */
 .footer{
     position: relative;
