@@ -25,15 +25,12 @@
 }
 
 /* Project and work */
-.project-details, .work-details, .study-details{
+.project-details, .work-details, .study-details, .blog-list-excerpt{
     font-size: 0.9em;
     line-height: 1.618em;
     margin-bottom: 1.618em;
     margin-top: 1.618em;
     clear: both;
-}
-.project-link:hover{
-    color: #0077b3;
 }
 .project-title,.work-title{
     margin-left: 10px;
@@ -42,6 +39,9 @@
     color: grey;
     font-size: 1.5em;
     margin: 0px 8px;
+}
+.project-link:hover{
+    color: #0077b3;
 }
 .project-icon,.work-icon{
     max-width: 50px;
@@ -61,7 +61,7 @@ a.work-title{
 .margin-top{
     margin-top: 4px;
 }
-.skill-item {
+.skill-item, .tag-item {
     padding: 8px;
     background: #f0f0f0;
     border-radius: 4px;
@@ -70,7 +70,7 @@ a.work-title{
     cursor: pointer;
     font-size: 0.7em;
 }
-.skill-item:hover {
+.skill-item:hover, .tag-item:hover {
     background: #0077b3;
     color: white;
 }
@@ -255,27 +255,37 @@ tr.skill-set > td {
 }
 
 /* Blog */
-.blog-list{
-    max-width: 750px;
+.badge-text-info .day {
+    font-size: 15px;
+    line-height: 18px;
 }
-.blog-list-post{
-    padding: 24px;
-}
-.blog-list-day-month{
-    font-size: 16px;
-}
-.blog-list-year{
+.badge-text-info .month{
     font-size: 13px;
+    line-height: 18px;
 }
 .blog-list-title{
-    font-size: 20px;
-    color: #3F51B5;
+    padding: 8px 4px 4px 0px;
     font-weight: 500;
-    padding: 8px 0px;
+    font-size: 18px;
+}
+.cat-icon{
+    padding: 12px 4px 4px 8px;
+    color: grey;
+    font-size: 16px;
 }
 .blog-list-excerpt{
-    font-size: 100%;
-    line-height: 1.5;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.blog-list-link{
+    color: grey;
+    font-size: 0.8em;
+    margin: 0px 8px;
+    text-decoration: none;
+}
+.blog-list-link:hover{
+    color: #0077b3;
+    text-decoration: none;
 }
 
 /* Footer */
