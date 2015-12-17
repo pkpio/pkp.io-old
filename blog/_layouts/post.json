@@ -1,0 +1,17 @@
+---
+---
+{
+  "title"    : "{{ page.title | escape }}",
+  "category" : "{{ page.category }}",
+  "tags"     : [
+                 {% for tag in page.tags %}
+                   "{{ tag }}"{% unless forloop.last %},{% endunless %}
+                 {% endfor %}
+                ],
+  "date"     : "{{ page.date }}",
+  "excerpt"  : "{{ page.excerpt }}",
+  "content"  : {{ page.raw_content | jsonify }},
+  "next_url"     : "{{ page.next.url }}",
+  "previous_url" : "{{ page.previous.url }}"
+}
+
