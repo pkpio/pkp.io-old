@@ -1,7 +1,7 @@
 ---
 layout: post
-title: New blog with all static setup
-categories: [Web, Angular, Jekyll]
+title: A sample post to do some blog testing
+categories: [Web, Android]
 ---
 
 Yet another time, I'm starting a new blog. This time it's using jekyll but not in the usual way it is supposed to be used.
