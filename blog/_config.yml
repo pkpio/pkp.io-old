@@ -11,7 +11,7 @@ author: Praveen Kumar
 author_email: m@praveen.xyz
 
 # The directory for category index pages
-category_dir: categories/
+category_dir: category/
 
 # Uncomment if you are planning to run the blog in a subdirectory
 # Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.
