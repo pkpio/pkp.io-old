@@ -312,10 +312,17 @@ tr.skill-set > td {
     margin: 4px;
     cursor: pointer;
     font-size: 0.8em;
+    text-decoration: none;
 }
 .post-tag-item:hover {
     color: #3F51B5;
     background: rgba(255,255,255,0.87);
+    text-decoration: none;
+}
+.post-tag-item:active {
+    color: #3F51B5;
+    background: rgba(255,255,255,0.87);
+    text-decoration: none;
 }
 .post-date{
     color: rgba(255,255,255,0.87);
