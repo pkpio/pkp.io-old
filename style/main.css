@@ -41,7 +41,7 @@
     margin: 0px 8px;
 }
 .project-link:hover{
-    color: #0077b3;
+    color: #3F51B5;
 }
 .project-icon,.work-icon{
     max-width: 50px;
@@ -63,16 +63,24 @@ a.work-title{
 }
 .skill-item, .tag-item {
     padding: 8px;
+    color: #0a0a0a;
     background: #f0f0f0;
     border-radius: 4px;
     box-sizing: border-box;
     margin: 4px;
     cursor: pointer;
     font-size: 0.7em;
+    text-decoration: none;
 }
 .skill-item:hover, .tag-item:hover {
     background: #0077b3;
     color: white;
+    text-decoration: none;
+}
+.skill-item:active, .tag-item:active {
+    background: #0077b3;
+    color: white;
+    text-decoration: none;
 }
 .badge-text-info{
     font-size: 0.7em;
@@ -284,7 +292,7 @@ tr.skill-set > td {
     text-decoration: none;
 }
 .blog-list-link:hover{
-    color: #0077b3;
+    color: #3F51B5;
     text-decoration: none;
 }
 

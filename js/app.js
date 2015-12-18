@@ -40,7 +40,11 @@ angular.module('PraveenApp').config(function($routeProvider) {
             templateUrl : 'view/blog.html',
             controller  : 'BlogCtrl'
         })
-        .when('/blog/:posturl*\/',{
+        .when('/blog/category/:category',{
+            templateUrl : 'view/blog.html',
+            controller  : 'BlogCtrl'
+        })
+        .when('/blog/post/:posturl*\/',{
             templateUrl : 'view/post.html',
             controller  : 'BlogPostCtrl'
         })

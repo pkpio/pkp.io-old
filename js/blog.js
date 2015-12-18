@@ -1,15 +1,21 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, config, $http) {
+angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, config, $http, $routeParams) {
     $scope.posts = null;
     $scope.ready = 0;
+
+    // Which posts to list
+    var listUrl = 'blog/_site/posts.json';
+    if($routeParams.category)
+        listUrl = 'blog/_site/category/' + $routeParams.category;
+
 
     // Get posts list
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: 'blog/_site/posts.json'
+            url: listUrl
         };
         $http(req)
             .then(
