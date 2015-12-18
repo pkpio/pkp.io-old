@@ -4,7 +4,7 @@
   "title"        : {{ page.title | jsonify }},
   "categories"   : {{ page.categories | jsonify }},
   "date"         : {{ page.date | jsonify }},
-  "content"      : {{ page.content | jsonify }},
+  "content"      : {{ content | jsonify }},
   "next_url"     : {{ page.next.url | jsonify }},
   "previous_url" : {{ page.previous.url | jsonify }}
 }
