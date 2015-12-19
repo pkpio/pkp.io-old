@@ -16,7 +16,6 @@ angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeou
                 function (response) { // Success callback
                     $scope.post = response.data;
                     $scope.ready = 1;
-                    console.log($scope.post);
                 },
                 function (response) { //Error callback
                     console.log(response.toString());
