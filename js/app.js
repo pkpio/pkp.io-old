@@ -33,10 +33,10 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
 }]);
 
 // Route setup
-angular.module('PraveenApp').config(function($routeProvider) {
+angular.module('PraveenApp').config(function($routeProvider, $locationProvider) {
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
-    
+
     $routeProvider
         .when('/about',{
             templateUrl : 'view/about.html',
