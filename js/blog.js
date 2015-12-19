@@ -8,7 +8,7 @@ angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, c
     // Which posts to list
     var listUrl = '/posts.json';
     if($routeParams.category)
-        listUrl = '/category/' + $routeParams.category;
+        listUrl = '/category/' + $routeParams.category + '/';
 
 
     // Get posts list
