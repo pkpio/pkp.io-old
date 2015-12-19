@@ -15,7 +15,7 @@ angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, c
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: config.blogUrl + '/' + listUrl
+            url: config.blogUrl + listUrl
         };
         $http(req)
             .then(
