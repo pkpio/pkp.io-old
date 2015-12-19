@@ -6,16 +6,16 @@ angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, c
     $scope.ready = 0;
 
     // Which posts to list
-    var listUrl = 'blog/_site/posts.json';
+    var listUrl = '/posts.json';
     if($routeParams.category)
-        listUrl = 'blog/_site/category/' + $routeParams.category;
+        listUrl = '/category/' + $routeParams.category;
 
 
     // Get posts list
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: listUrl
+            url: config.blogUrl + '/' + listUrl
         };
         $http(req)
             .then(

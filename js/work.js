@@ -10,7 +10,7 @@ angular.module('PraveenApp').controller('WorkCtrl', function($scope, $timeout, c
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: 'data/work.json'
+            url: config.baseUrl + '/data/work.json'
         };
         $http(req)
             .then(

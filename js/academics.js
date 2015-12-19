@@ -10,7 +10,7 @@ angular.module('PraveenApp').controller('AcadCtrl', function($scope, $timeout, c
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: 'data/academics.json'
+            url: config.baseUrl + '/data/academics.json'
         };
         $http(req)
             .then(

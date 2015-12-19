@@ -9,7 +9,7 @@ angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeou
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: 'blog/_site/' + $routeParams.posturl
+            url: config.blogUrl + '/' + $routeParams.posturl
         };
         $http(req)
             .then(

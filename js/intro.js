@@ -23,7 +23,7 @@ angular.module('PraveenApp').controller('IntroCtrl', function($scope, $timeout, 
     $scope.loadData = function(){
         var req = {
             method: 'GET',
-            url: 'data/intro.json'
+            url: config.baseUrl + '/data/intro.json'
         };
         $http(req)
             .then(
