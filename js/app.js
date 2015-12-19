@@ -34,6 +34,9 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
 
 // Route setup
 angular.module('PraveenApp').config(function($routeProvider) {
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
+    
     $routeProvider
         .when('/about',{
             templateUrl : 'view/about.html',
@@ -74,27 +77,27 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
         {
             class: "fa-user",
             text: "About",
-            url: "#/about"
+            url: "/about"
         },
         {
             class: "fa-graduation-cap",
             text: "Studies",
-            url: "#/studies"
+            url: "/studies"
         },
         {
             class: "fa-coffee",
             text: "Work",
-            url: "#/work"
+            url: "/work"
         },
         {
             class: "fa-code",
             text: "Projects",
-            url: "#/projects"
+            url: "/projects"
         },
         {
             class: "fa-pencil",
             text: "Blog",
-            url: "#/blog"
+            url: "/blog"
         }
     ];
 });
