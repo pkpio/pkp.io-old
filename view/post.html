@@ -32,6 +32,9 @@
             <md-card-content layout-align="center center" layout="column" class="no-bottom-pad">
                 <div class="blog-post-content" ng-bind-html="renderHtml(post.content)"></div>
             </md-card-content>
+
+            <dir-disqus disqus-shortname="pkpio">
+            </dir-disqus>
         </md-card>
     </div>
 </div>

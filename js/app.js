@@ -2,7 +2,8 @@
  * Created by praveen on 12.09.15.
  */
 
-angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite']);
+angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite',
+    'angularUtils.directives.dirDisqus']);
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
