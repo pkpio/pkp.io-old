@@ -227,11 +227,11 @@ tr.skill-set > td {
 .font-13{
     font-size: 13px;
 }
-.resume-wrapper{
+.card-bottom-btn-wrapper {
     border-top: dashed #DDDDDD 1px;
     margin-top: 4px;
 }
-.resume-btn{
+.card-bottom-btn {
     color: #3F51B5;
     margin: 0px;
     padding: 4px;
