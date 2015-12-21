@@ -48,11 +48,17 @@
             </div>
         </md-card>
 
-        <div class="pad-top" layout-fill layout-padding>
-            <dir-disqus disqus-shortname="pkpio"
+        <!-- Comments section -->
+        <div class="pad-top" layout-fill layout-align="center center" layout="row">
+            <md-button flex="95" class="card-bottom-btn" ng-init="showDiscuss = false"
+                       ng-show="!showDiscuss" ng-click="showDiscuss = !showDiscuss">
+                <i class="fa fa-comments"></i> Show comments
+            </md-button>
+            <dir-disqus flex="95"
+                        disqus-shortname="pkpio"
                         disqus-identifier="{{ post.url }}"
                         disqus-url="https://pkp.io/blog/post{{ post.url }}"
-                        ready-to-bind="{{ ready }}">
+                        ready-to-bind="{{ ready }}" ng-show="showDiscuss" >
             </dir-disqus>
         </div>
 
