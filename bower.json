@@ -24,7 +24,9 @@
   ],
   "dependencies": {
     "angular-timeline": "~1.5.2",
-    "angularUtils-disqus": "angular-utils-disqus#~0.4.0"
+    "angularUtils-disqus": "angular-utils-disqus#~0.4.0",
+    "angular-route": "~1.4.8",
+    "angular-material": "~1.0.1"
   },
   "resolutions": {
     "angular": "~1.2.0"
