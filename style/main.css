@@ -306,6 +306,9 @@ tr.skill-set > td {
     font-weight: 400;
     margin-bottom: 8px;
 }
+.max-width-parent {
+   max-width: 100%;
+}
 .post-tag-item {
     padding: 8px;
     color: rgba(255,255,255,0.87);
