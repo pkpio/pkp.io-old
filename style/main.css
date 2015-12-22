@@ -138,6 +138,9 @@ body{
 .pad-top{
     padding-top: 25px;
 }
+.high-margin-top{
+    margin-top: 25px;
+}
 .menu-btn{
     min-width: 150px;
 }

@@ -67,9 +67,12 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             templateUrl : 'view/post.html',
             controller  : 'BlogPostCtrl'
         })
-        .otherwise({
+        .when('/',{
             templateUrl : 'view/intro.html',
             controller  : 'IntroCtrl'
+        })
+        .otherwise({
+            templateUrl : 'view/404.html'
         });
 });
 
