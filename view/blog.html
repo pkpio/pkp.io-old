@@ -31,8 +31,8 @@
                     </a>
                 </div>
 
-                <!-- Excerpt -->
-                <p class="blog-list-excerpt">{{ post.excerpt }}</p>
+                <!-- Excerpt : renderHtml to escape converted HTML special chars -->
+                <p class="blog-list-excerpt" ng-bind-html="renderHtml(post.excerpt)"></p>
 
             </timeline-panel>
 

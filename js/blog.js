@@ -1,7 +1,7 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, config, $http, $routeParams) {
+angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, config, $http, $routeParams, $sce) {
     $scope.posts = null;
     $scope.ready = 0;
 
@@ -31,6 +31,10 @@ angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, c
 
     // Delayed call to avoid navbar freeze on close
     $timeout($scope.loadData, config.loadDelay);
+
+    $scope.renderHtml = function (htmlCode) {
+        return $sce.trustAsHtml(htmlCode);
+    };
 
     $scope.extractDay = function(dateStr){
         var items = dateStr.split("-");
