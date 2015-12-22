@@ -272,9 +272,11 @@ tr.skill-set > td {
     line-height: 18px;
 }
 .blog-list-title{
-    padding: 8px 4px 4px 0px;
+    padding: 8px 4px 8px 4px;
     font-weight: 500;
     font-size: 18px;
+    text-decoration: none;
+    color: #3F51B5;
 }
 .cat-icon{
     padding: 12px 4px 4px 8px;
