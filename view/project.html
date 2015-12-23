@@ -1,47 +1,80 @@
-<div flex layout="column" layout-align="center center">
+<div flex="100" layout="column" layout-align="center center">
 
     <ng-include src="'view/loading.html'"></ng-include>
 
-    <timeline>
-        <timeline-event ng-repeat="project in projects">
 
-            <!-- Badge -->
-            <timeline-badge class="year-{{ project.year }}">
-                <span class="badge-text-info">{{project.year}}</span>
-            </timeline-badge>
+    <div layout-align="center center" layout="column" class="pad-top" ng-show="ready">
 
-            <!-- Project info -->
-            <timeline-panel class="{{ project.badgeClass }}">
+        <md-card>
+            <md-card-content layout-align="center center" layout="column">
 
-                <!-- Title -->
-                <timeline-heading>
-                    <h4 layout="row" layout-align="start center" layout-padding>
-                        <img ng-src="{{ project.icon }}" class="project-icon">
-                        <span class="project-title">{{ project.title }}</span>
-                    </h4>
-                </timeline-heading>
+                <h3>Filter projects</h3>
+                <div layout="row" layout-fill>
+                    <!-- year filter -->
+                    <md-input-container flex layout-align="center center">
+                        <label>Year </label>
+                        <md-select ng-model="filters.year.value">
+                            <md-option ng-repeat="year in filters.year.options" value="{{year}}">
+                                {{year}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
 
-                <!-- Skills -->
-                <div layout="row" layout-wrap layout-align="start start" class="margin-top">
-                    <span class="skill-item" ng-repeat="skill in project.skills">
-                        {{ skill }}
-                    </span>
+                    <!-- Significance level filter -->
+                    <md-input-container flex layout-align="center center">
+                        <label>Significance level </label>
+                        <md-select ng-model="filters.showlevel.value">
+                            <md-option ng-repeat="level in filters.showlevel.options" value="{{level}}">
+                                {{level}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
                 </div>
+            </md-card-content>
+        </md-card>
 
-                <!-- Details -->
-                <p class="project-details">{{ project.details }}</p>
+        <timeline>
+            <timeline-event ng-repeat="project in projects | filter : filters.filter">
 
-                <!-- Links -->
-                <div flex layout="row" layout-align="center center">
-                    <span ng-repeat="link in project.links">
-                        <a href="{{ link.url }}" class="project-link">
-                            <i class="fa fa-fw {{ link.iconClass }} "></i>
-                        </a>
-                    </span>
-                </div>
+                <!-- Badge -->
+                <timeline-badge class="year-{{ project.year }}">
+                    <span class="badge-text-info">{{project.year}}</span>
+                </timeline-badge>
 
-            </timeline-panel>
+                <!-- Project info -->
+                <timeline-panel class="{{ project.badgeClass }}">
 
-        </timeline-event>
-    </timeline>
+                    <!-- Title -->
+                    <timeline-heading>
+                        <h4 layout="row" layout-align="start center" layout-padding>
+                            <img ng-src="{{ project.icon }}" class="project-icon">
+                            <span class="project-title">{{ project.title }}</span>
+                        </h4>
+                    </timeline-heading>
+
+                    <!-- Skills -->
+                    <div layout="row" layout-wrap layout-align="start start" class="margin-top">
+                        <span class="skill-item" ng-repeat="skill in project.skills">
+                            {{ skill }}
+                        </span>
+                    </div>
+
+                    <!-- Details -->
+                    <p class="project-details">{{ project.details }}</p>
+
+                    <!-- Links -->
+                    <div flex layout="row" layout-align="center center">
+                        <span ng-repeat="link in project.links">
+                            <a href="{{ link.url }}" class="project-link">
+                                <i class="fa fa-fw {{ link.iconClass }} "></i>
+                            </a>
+                        </span>
+                    </div>
+
+                </timeline-panel>
+
+            </timeline-event>
+        </timeline>
+    </div>
 </div>
