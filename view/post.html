@@ -3,7 +3,7 @@
     <ng-include src="'view/loading.html'"></ng-include>
 
 
-    <div layout-align="center center" layout="column" class="pad-top max-width-parent" ng-show="ready">
+    <div layout-align="center center" layout="column" class="pad-top content-wrapper-width" ng-show="ready">
 
         <md-card class="max-width-parent">
             <div layout="column" layout-align="center center" class="title-block">
@@ -30,7 +30,7 @@
             </div>
 
             <md-card-content layout-align="center center" layout="column" class="no-bottom-pad max-width-parent">
-                <div class="max-width-parent" ng-bind-html="renderHtml(post.content)"></div>
+                <div class="max-width-parent readable-text" ng-bind-html="renderHtml(post.content)"></div>
             </md-card-content>
 
             <!-- Next and Prev post buttons -->

@@ -98,7 +98,6 @@ a.work-title{
     margin: 0px 0px;
 }
 .timeline-maxwidth{
-    /* Workaround */
     max-width: 1000px;
 }
 
@@ -149,6 +148,16 @@ body{
 }
 .no-decoration{
     text-decoration: none !important;
+}
+.content-wrapper-width{
+    max-width: 850px;
+    width: 100%;
+}
+.readable-text{
+    font-size: 0.9em;
+    line-height: 1.618em;
+    clear: both;
+    text-align: justify;
 }
 
 /* About */
