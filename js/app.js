@@ -22,7 +22,7 @@ angular.module('PraveenApp').config(function($mdThemingProvider) {
 // Auto page title setup
 angular.module('PraveenApp').run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$$route.title;
+        $rootScope.title = current.title;
     });
 }]);
 
@@ -86,7 +86,7 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             controller  : 'IntroCtrl'
         })
         .otherwise({
-            title       : 'Banana? Nothing here!',  // This title is not taken by the routeProvider
+            title       : 'Praveen\'s site - 404 not found!',  // This title is not taken by the routeProvider
             templateUrl : 'view/404.html',
             controller  : 'ErrorCtrl'
         });
