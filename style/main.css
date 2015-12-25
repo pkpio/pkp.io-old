@@ -159,6 +159,11 @@ body{
     clear: both;
     text-align: justify;
 }
+.alt-url{
+    color: #3F51B5;
+    padding: 8px;
+    background: #cccccc;
+}
 
 /* About */
 .title-block {

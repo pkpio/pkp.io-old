@@ -23,14 +23,18 @@
     <!-- Toolbar -->
     <md-toolbar layout="row" layout-align="center center" layout-wrap>
         <md-button ng-repeat="menu in menuItems" ng-href="{{menu.url}}" class="menu-btn">
-            <i class="fa {{menu.class}}"></i> {{menu.text}}
+            <i class="fa {{menu.class}}" ng-bind="' ' + menu.text"></i>
         </md-button>
     </md-toolbar>
 
     <!-- Content -->
     <div flex layout="row" layout-align="center center" class="content-view">
         <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column">
-            <noscript style="text-align:center;"><b>Enable JavaScript jackass!</b></noscript>
+            <noscript style="text-align:center;">
+                Enable Javascript<br/><br/>
+                Or <br/><br/>
+                Add <span class="alt-url">?nojs</span> at the end of the url.
+            </noscript>
         </div>
     </div>
 
