@@ -1,7 +1,8 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeout, config, $http, $routeParams, $sce) {
+angular.module('PraveenApp').controller('BlogPostCtrl', function($rootScope, $scope, $timeout, config, $http,
+                                                                 $routeParams, $sce) {
     $scope.post = null;
     $scope.ready = 0;
 
@@ -16,6 +17,7 @@ angular.module('PraveenApp').controller('BlogPostCtrl', function($scope, $timeou
                 function (response) { // Success callback
                     $scope.post = response.data;
                     $scope.ready = 1;
+                    $rootScope.title = $scope.post.title;
                 },
                 function (response) { //Error callback
                     console.log(response.toString());

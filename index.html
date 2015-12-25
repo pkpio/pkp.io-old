@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="PraveenApp">
 <head>
-    <base href="/">
+    <base href="/pkp.io/">
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="style/main.css"/>
     <link rel="stylesheet" href="style/markdown.css"/>
-    <title>Praveen</title>
+    <title ng-bind="title">Praveen</title>
 </head>
 
 <body ng-controller="AppCtrl">
@@ -78,6 +78,7 @@
     <script src="js/work.js"></script>
     <script src="js/blog.js"></script>
     <script src="js/post.js"></script>
+    <script src="js/error.js"></script>
 
 </body>
 </html>

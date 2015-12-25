@@ -19,6 +19,13 @@ angular.module('PraveenApp').config(function($mdThemingProvider) {
         .accentPalette('deep-orange');
 });
 
+// Auto page title setup
+angular.module('PraveenApp').run(['$rootScope', function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+    });
+}]);
+
 // Disable caching for all HTTP requests
 angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
     //initialize get if not there
@@ -28,7 +35,6 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
 
     //disable IE ajax request caching
     $httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
-    // extra
     $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 }]);
@@ -40,39 +46,49 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
 
     $routeProvider
         .when('/about',{
+            title       : 'Praveen\'s profile',
             templateUrl : 'view/about.html',
             controller  : 'AboutCtrl'
         })
         .when('/studies',{
+            title       : 'Praveen\'s studies',
             templateUrl : 'view/academics.html',
             controller  : 'AcadCtrl'
         })
         .when('/work',{
+            title       : 'Praveen\'s work',
             templateUrl : 'view/work.html',
             controller  : 'WorkCtrl'
         })
         .when('/projects',{
+            title       : 'Praveen\'s projects',
             templateUrl : 'view/project.html',
             controller  : 'ProjectCtrl'
         })
         .when('/blog',{
+            title       : 'Praveen\'s blog',
             templateUrl : 'view/blog.html',
             controller  : 'BlogCtrl'
         })
         .when('/blog/category/:category',{
+            title       : 'Praveen\'s blog category',
             templateUrl : 'view/blog.html',
             controller  : 'BlogCtrl'
         })
         .when('/blog/post/:posturl*\/',{
+            title       : 'Praveen\'s blog post',
             templateUrl : 'view/post.html',
             controller  : 'BlogPostCtrl'
         })
         .when('/',{
+            title       : 'Praveen\'s site',
             templateUrl : 'view/intro.html',
             controller  : 'IntroCtrl'
         })
         .otherwise({
-            templateUrl : 'view/404.html'
+            title       : 'Banana? Nothing here!',  // This title is not taken by the routeProvider
+            templateUrl : 'view/404.html',
+            controller  : 'ErrorCtrl'
         });
 });
 
