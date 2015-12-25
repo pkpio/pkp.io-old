@@ -1,7 +1,8 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogCtrl', function($scope, $timeout, config, $http, $routeParams, $sce) {
+angular.module('PraveenApp').controller('BlogCtrl', function($rootScope, $scope, $timeout, config, $http,
+                                                             $routeParams, $sce) {
     $scope.posts = null;
     $scope.ready = 0;
 
