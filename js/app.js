@@ -3,7 +3,7 @@
  */
 
 angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite',
-    'angularUtils.directives.dirDisqus']);
+    'angularUtils.directives.dirDisqus', 'angulartics', 'angulartics.google.analytics']);
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
