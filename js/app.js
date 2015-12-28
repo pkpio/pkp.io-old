@@ -85,10 +85,14 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             templateUrl : 'view/intro.html',
             controller  : 'IntroCtrl'
         })
+        .when('/index.html',{
+            title       : 'Praveen\'s site',
+            templateUrl : 'view/intro.html',
+            controller  : 'IntroCtrl'
+        })
         .otherwise({
             title       : 'Praveen\'s site - 404 not found!',  // This title is not taken by the routeProvider
-            templateUrl : 'view/404.html',
-            controller  : 'ErrorCtrl'
+            templateUrl : 'view/404.html'
         });
 });
 
