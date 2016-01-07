@@ -164,6 +164,9 @@ body{
     padding: 8px;
     background: #cccccc;
 }
+.pad16{
+   padding: 16px;
+}
 
 /* About */
 .title-block {
