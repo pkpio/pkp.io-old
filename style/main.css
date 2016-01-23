@@ -3,6 +3,31 @@ a{
    text-decoration: none;
    color: #3F51B5;
 }
+.main-title{
+    font-size: 24px;
+    margin: 8px;
+    letter-spacing: 2px;
+}
+.main-title p{
+    margin: 5px;
+}
+.main-title span{
+    color: #03A9F4;
+    font-weight: 500;
+    margin: 0px 0px 0px 4px;
+}
+#io{
+    background: #03A9F4;
+    position: relative;
+    top: -2px;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 4px;
+    margin-left: 4px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
 
 /* Year colors */
 .year-Now{
