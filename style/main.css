@@ -4,26 +4,25 @@ a{
    color: #3F51B5;
 }
 .main-title{
-    font-size: 24px;
+    font-size: 20px;
     margin: 16px 8px;
     letter-spacing: 2px;
 }
 .main-title p{
-    margin: 5px;
+    margin: 4px;
 }
 .main-title span{
-    color: #03A9F4;
     font-weight: 500;
-    margin: 0px 0px 0px 4px;
+    margin: 0px 0px 0px 2px;
 }
 #io{
-    background: #03A9F4;
+    background: #303F9F;
     position: relative;
     top: -2px;
     color: whitesmoke;
     font-size: 14px;
     padding: 4px;
-    margin-left: 4px;
+    margin-left: 2px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
