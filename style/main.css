@@ -4,9 +4,14 @@ a{
    color: #3F51B5;
 }
 .main-title{
+    background: #3F51B5;
     font-size: 20px;
-    margin: 16px 8px;
+    margin: 16px 8px 24px 8px;
     letter-spacing: 2px;
+    color: whitesmoke;
+}
+.main-title:active{
+    text-decoration: none;
 }
 .main-title p{
     margin: 4px;
@@ -21,11 +26,15 @@ a{
     top: -2px;
     color: whitesmoke;
     font-size: 14px;
-    padding: 4px;
+    font-weight: 600;
+    padding: 4px 4px 4px 7px;
     margin-left: 2px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
+}
+#fslash{
+    font-size: 16px;
 }
 
 /* Year colors */
