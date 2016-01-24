@@ -7,7 +7,7 @@ angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angu
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
-    baseUrl : 'https://pkp.io',     // Baseurl to load site resources
+    baseUrl : 'https:///pkp.io',     // Baseurl to load site resources
     blogUrl : 'https://blog.pkp.io',// Api url for blog
     loadDelay : 0                   // Min. delay before sending data load requests
 });
@@ -50,7 +50,7 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             templateUrl : 'view/about.html',
             controller  : 'AboutCtrl'
         })
-        .when('/studies',{
+        .when('/academia',{
             title       : 'Praveen\'s studies',
             templateUrl : 'view/academics.html',
             controller  : 'AcadCtrl'
@@ -105,11 +105,11 @@ angular.module('PraveenApp').controller('AppCtrl', function($scope) {
         },
         {
             class: "fa-graduation-cap",
-            text: "Studies",
-            url: "/studies"
+            text: "Academia",
+            url: "/academia"
         },
         {
-            class: "fa-coffee",
+            class: "fa-user-secret",
             text: "Work",
             url: "/work"
         },

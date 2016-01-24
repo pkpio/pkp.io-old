@@ -2,30 +2,79 @@
 
     <ng-include src="'view/loading.html'"></ng-include>
 
-    <timeline layout-fill class="timeline-maxwidth">
-        <timeline-event ng-repeat="study in studies">
-            <timeline-badge class="year-{{ study.year }}">
-                <span class="badge-text-info">{{study.year}}</span>
-            </timeline-badge>
+    <md-tabs md-dynamic-height md-center-tabs layout-fill class="timeline-maxwidth">
 
-            <timeline-panel class="{{event.badgeClass}}">
-                <timeline-heading>
-                    <p><i class="fa fa-graduation-cap fa-fw"></i> {{study.degree}}</p>
-                </timeline-heading>
+        <!-- Publications Tab -->
+        <md-tab>
+            <md-tab-label layout="row">
+                <i class="fa fa-book"> Publications</i>
+            </md-tab-label>
+            <md-tab-body>
+                <timeline layout-fill class="timeline-maxwidth">
+                    <timeline-event ng-repeat="paper in papers">
+                        <timeline-badge class="year-{{ paper.year }}">
+                            <span class="badge-text-info">{{paper.year}}</span>
+                        </timeline-badge>
 
-                <p>
-                    <i class="fa fa-university fa-fw"></i>
-                    {{ study.school }}
-                </p>
-                <p>
-                    <i class="fa fa-map-marker fa-fw"></i>
-                    {{ study.place }}
-                </p>
-                <p>
-                    <i class="fa fa-clock-o fa-fw"></i>
-                    {{ study.duration }}
-                </p>
-            </timeline-panel>
-        </timeline-event>
-    </timeline>
+                        <timeline-panel class="{{event.badgeClass}}">
+                            <timeline-heading>
+                                <p layout="row" layout-align="start center">
+                                    <i class="fa fa-book fa-fw study-info-icon"></i>
+                                    <span class="study-details">{{paper.title}}</span>
+                                </p>
+                            </timeline-heading>
+
+                            <p layout="row" layout-align="start center">
+                                <i class="fa fa-users fa-fw study-info-icon"></i>
+                                <span class="study-details">{{ paper.authors }}</span>
+                            </p>
+                            <p layout="row" layout-align="start center">
+                                <i class="fa fa-university fa-fw study-info-icon"></i>
+                                <span class="study-details">{{ paper.place }}</span>
+                            </p>
+                        </timeline-panel>
+                    </timeline-event>
+                </timeline>
+            </md-tab-body>
+        </md-tab>
+
+        <!-- Studies Tab -->
+        <md-tab>
+            <md-tab-label layout="row">
+                <i class="fa fa-university"> Education</i>
+            </md-tab-label>
+            <md-tab-body>
+                <timeline layout-fill class="timeline-maxwidth">
+                    <timeline-event ng-repeat="study in studies">
+                        <timeline-badge class="year-{{ study.year }}">
+                            <span class="badge-text-info">{{study.year}}</span>
+                        </timeline-badge>
+
+                        <timeline-panel class="{{event.badgeClass}}">
+                            <timeline-heading>
+                                <p layout="row" layout-align="start center">
+                                    <i class="fa fa-graduation-cap fa-fw study-info-icon"></i>
+                                    <span class="study-details">{{study.degree}}</span>
+                                </p>
+                            </timeline-heading>
+
+                            <p layout="row" layout-align="start center">
+                                <i class="fa fa-university fa-fw study-info-icon"></i>
+                                <span class="study-details">{{ study.school }}</span>
+                            </p>
+                            <p layout="row" layout-align="start center">
+                                <i class="fa fa-map-marker fa-fw study-info-icon"></i>
+                                <span class="study-details">{{ study.place }}</span>
+                            </p>
+                            <p layout="row" layout-align="start center">
+                                <i class="fa fa-clock-o fa-fw study-info-icon"></i>
+                                <span class="study-details">{{ study.duration }}</span>
+                            </p>
+                        </timeline-panel>
+                    </timeline-event>
+                </timeline>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+
 </div>

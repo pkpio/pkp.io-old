@@ -41,6 +41,12 @@ a{
 .year-Now{
     background-color: #4BAE4F !important;
 }
+.year-2017{
+    background-color: #F34235 !important;
+}
+.year-2016{
+    background-color: #FEC006 !important;
+}
 .year-2015{
     background-color: #3E50B4 !important;
 }
@@ -63,8 +69,21 @@ a{
     background-color: #F34235 !important;
 }
 
+/* Academia */
+.study-info-icon{
+    font-size: 1.2em;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: #333333;
+}
+.study-details {
+    font-size: 0.9em;
+    line-height: 1.618em;
+    clear: both;
+}
+
 /* Project and work */
-.project-details, .work-details, .study-details, .blog-list-excerpt{
+.project-details, .work-details, .blog-list-excerpt{
     font-size: 0.9em;
     line-height: 1.618em;
     margin-bottom: 1.618em;
@@ -91,11 +110,11 @@ a.work-title{
     text-decoration: none;
     color: inherit;
 }
-.work-info-icon, .study-info-icon{
+.work-info-icon {
     font-size: 1.5em;
     margin-right: 10px;
     margin-left: 20px;
-    color: #666666;
+    color: #333333;
 }
 .margin-top{
     margin-top: 4px;

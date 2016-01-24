@@ -3,6 +3,7 @@
  */
 
 angular.module('PraveenApp').controller('AcadCtrl', function($scope, $timeout, config, $http) {
+    $scope.papers = null;
     $scope.studies = null;
     $scope.ready = 0;
 
@@ -15,7 +16,8 @@ angular.module('PraveenApp').controller('AcadCtrl', function($scope, $timeout, c
         $http(req)
             .then(
             function (response) { // Success callback
-                $scope.studies = response.data;
+                $scope.papers = response.data.papers;
+                $scope.studies = response.data.studies;
                 $scope.ready = 1;
             },
             function (response) { //Error callback
