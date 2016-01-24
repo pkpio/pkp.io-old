@@ -16,7 +16,7 @@ angular.module('PraveenApp').constant('config', {
 angular.module('PraveenApp').config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('indigo')
-        .accentPalette('deep-orange');
+        .accentPalette('blue');
 });
 
 // Auto page title setup
