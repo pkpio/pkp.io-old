@@ -4,13 +4,13 @@
       "year": "2016",
       "title": "DroidAuditor: Forensic Analysis of Application-Layer Privilege Escalation Attacks on Android",
       "authors": "Stephan Heuser, Marco Negro, Praveen Kumar Pendyala and Ahmad-Reza Sadeghi",
-      "place" : "Financial Crypto 2016"
+      "place" : "20th Financial Cryptography and Data Security Conference 2016"
     },
     {
       "year": "2014",
       "title": "PUFatt: Embedded Platform Attestation Based on Novel Processor-Based PUFs",
       "authors": "Joonho Kong, Farinaz Koushanfar, Praveen K. Pendyala, Ahmad-Reza Sadeghi, Christian Wachsmann",
-      "place" : "Design Automation Conference (DAC) 2014"
+      "place" : "51st Design Automation Conference (DAC) 2014"
     }
   ],
 
