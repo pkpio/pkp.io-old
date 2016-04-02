@@ -44,7 +44,8 @@
         <!-- Menu items -->
         <div layout="row" layout-align="center center" layout-wrap>
             <md-button ng-repeat="menu in menuItems" ng-href="{{menu.url}}" class="menu-btn">
-                <i class="fa {{menu.class}}" ng-bind="' ' + menu.text"></i>
+                <i class="fa {{menu.class}}"></i>
+                <span ng-bind="menu.text"></span>
             </md-button>
         </div>
     </md-toolbar>
