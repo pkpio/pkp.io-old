@@ -349,6 +349,18 @@ tr.skill-set > td {
     font-size: 13px;
     line-height: 18px;
 }
+.badge-text-info .year{
+    position: absolute;
+    left: 8px;
+    top: 49px;
+    font-size: 12px;
+    background-color: #3F51B5;
+    color: white;
+    height: 34px;
+    width: 34px;
+    border-radius: 34px;
+    line-height: 38px;
+}
 .blog-list-title{
     padding: 8px 4px 8px 4px;
     font-weight: 500;

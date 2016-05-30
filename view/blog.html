@@ -12,6 +12,9 @@
                     <span class="day">{{ extractDay(post.date) }}</span>
                     <span class="month">{{ extractMonth(post.date) }}</span>
                 </span>
+                <span class="badge-text-info year year-{{ extractYear(post.date) }}">
+                    {{ extractYear(post.date) }}
+                </span>
             </timeline-badge>
 
             <!-- Post info -->
