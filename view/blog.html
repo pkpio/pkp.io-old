@@ -1,10 +1,10 @@
-<div flex="100" layout="column" layout-align="center center">
+<div flex="100" layout="column" layout-align="center center" class="safari-height-fix">
 
     <ng-include src="'view/loading.html'"></ng-include>
 
 
-    <timeline layout-fill class="timeline-maxwidth">
-        <timeline-event ng-repeat="post in posts">
+    <timeline layout-fill class="timeline-maxwidth safari-height-fix">
+        <timeline-event ng-repeat="post in posts" class="safari-height-fix">
 
             <!-- Tims stamp badge -->
             <timeline-badge class="year-{{ extractYear(post.date) }}" layout-align="center center" layout="column">

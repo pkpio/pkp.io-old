@@ -458,3 +458,8 @@ tr.skill-set > td {
     position: relative;
     top: -6px;
 }
+
+/* Fixes and workarounds */
+.safari-height-fix{
+    flex: 1 0 auto !important;
+}

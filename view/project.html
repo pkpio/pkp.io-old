@@ -1,9 +1,9 @@
-<div flex="100" layout="column" layout-align="center center">
+<div flex="100" layout="column" layout-align="center center" class="safari-height-fix">
 
     <ng-include src="'view/loading.html'"></ng-include>
 
 
-    <div layout-align="center center" layout="column" class="pad-top" ng-show="ready">
+    <div layout-align="center center" layout="column" class="pad-top safari-height-fix" ng-show="ready">
 
         <md-card ng-show="false">
             <md-card-content layout-align="center center" layout="column">
@@ -34,7 +34,7 @@
             </md-card-content>
         </md-card>
 
-        <timeline>
+        <timeline class="safari-height-fix">
             <timeline-event ng-repeat="project in projects | filter : filters.filter">
 
                 <!-- Badge -->
