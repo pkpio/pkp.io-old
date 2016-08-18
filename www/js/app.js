@@ -3,11 +3,11 @@
  */
 
 angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angularTypewrite',
-    'angularUtils.directives.dirDisqus', 'angulartics', 'angulartics.google.analytics']);
+    'angularUtils.directives.dirDisqus', 'angulartics', 'angulartics.google.analytics', 'ngLoadScript']);
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
-    baseUrl : 'https:///pkp.io',     // Baseurl to load site resources
+    baseUrl : 'http://pkp.io',      // Baseurl to load site resources
     blogUrl : 'https://blog.pkp.io',// Api url for blog
     loadDelay : 0                   // Min. delay before sending data load requests
 });
