@@ -1,0 +1,33 @@
+application: pkp-io
+version: v1
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /js
+    static_dir: www/js
+
+  - url: /style
+    static_dir: www/style/
+  
+  - url: /bower_components
+    static_dir: www/bower_components/
+
+  - url: /data
+    static_dir: www/data/
+    http_headers:
+      Access-Control-Allow-Origin: '*'
+      Access-Control-Allow-Methods: 'GET, OPTIONS'
+      Access-Control-Max-Age: '1000'
+      Access-Control-Allow-Headers: 'Content-Type, origin, accept, If-Modified-Since, Pragma, Cache-Control'
+
+  - url: /view
+    static_dir: www/view/
+
+  - url: /img
+    static_dir: www/img/
+
+  - url: /.*
+    static_files: www/index.html
+    upload: www/index.html
