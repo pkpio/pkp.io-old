@@ -37,12 +37,12 @@
             <!-- Next and Prev post buttons -->
             <div flex layout="row" class="card-bottom-btn-wrapper">
                 <md-button flex="50" class="card-bottom-btn"
-                           ng-href="blog/post{{ post.previous_url }}"
+                           ng-href="blog{{ post.previous_url }}"
                            ng-disabled="post.previous_url == null">
                     <i class="fa fa-arrow-left"></i> Previous
                 </md-button>
                 <md-button flex="50" class="card-bottom-btn"
-                           ng-href="blog/post{{ post.next_url }}"
+                           ng-href="blog{{ post.next_url }}"
                            ng-disabled="post.next_url == null">
                     Next <i class="fa fa-arrow-right"></i>
                 </md-button>
@@ -58,7 +58,7 @@
             <dir-disqus flex="100"
                         disqus-shortname="pkpio"
                         disqus-identifier="{{ post.url }}"
-                        disqus-url="https://pkp.io/blog/post{{ post.url }}"
+                        disqus-url="http://pkp.io/blog{{ post.url }}"
                         ready-to-bind="{{ ready }}" ng-show="showDiscuss" >
             </dir-disqus>
         </div>
