@@ -75,6 +75,11 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             templateUrl : 'view/blog.html',
             controller  : 'BlogCtrl'
         })
+        .when('/blog/post/:posturl*\/',{
+            title       : 'Praveen\'s blog post',
+            templateUrl : 'view/post.html',
+            controller  : 'BlogPostCtrl'
+        })
         .when('/blog/:posturl*\/',{
             title       : 'Praveen\'s blog post',
             templateUrl : 'view/post.html',
