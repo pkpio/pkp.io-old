@@ -39,13 +39,13 @@ a{
 
 /* Year colors */
 .year-Now{
-    background-color: #4BAE4F !important;
+    background-color: #FF4081 !important;
 }
 .year-2017{
-    background-color: #F34235 !important;
+    background-color: #4BAE4F !important;
 }
 .year-2016{
-    background-color: #FF4081 !important;
+    background-color: #F34235 !important;
 }
 .year-2015{
     background-color: #3E50B4 !important;
