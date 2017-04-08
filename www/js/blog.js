@@ -1,11 +1,7 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogCtrl', function($rootScope, $scope, $timeout, config, $http,
-                                                             $routeParams, $sce) {
-    $scope.posts = null;
-    $scope.ready = 0;
-
+angular.module('PraveenApp').controller('BlogCtrl', function($rootScope, $scope, remote, $routeParams, $sce) {
     // Which posts to list
     var listUrl = '/posts.json';
     if($routeParams.category) {
@@ -13,27 +9,12 @@ angular.module('PraveenApp').controller('BlogCtrl', function($rootScope, $scope,
         $rootScope.title += ' - ' + $routeParams.category;
     }
 
-
     // Get posts list
-    $scope.loadData = function(){
-        var req = {
-            method: 'GET',
-            url: config.blogUrl + listUrl
-        };
-        $http(req)
-            .then(
-                function (response) { // Success callback
-                    $scope.posts = response.data;
-                    $scope.ready = 1;
-                },
-                function (response) { //Error callback
-                    console.log(response.toString());
-                }
-            );
-    };
-
-    // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, config.loadDelay);
+    remote.fetchBlogData(listUrl).then(
+        function (data) {
+            $scope.posts = data;
+        }
+    );
 
     $scope.renderHtml = function (htmlCode) {
         return $sce.trustAsHtml(htmlCode);

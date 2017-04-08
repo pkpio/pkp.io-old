@@ -72,7 +72,7 @@ angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, c
     this.fetchSiteData = function(relativeUrl) {
         return fetchData(config.baseUrl + relativeUrl);
     }
-    this.fetchBlogDate = function(relativeUrl) {
+    this.fetchBlogData = function(relativeUrl) {
         return fetchData(config.blogUrl + relativeUrl);
     };
     this.registerProgressObserver = function(callback){
