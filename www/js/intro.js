@@ -16,9 +16,8 @@ angular.module('PraveenApp').controller('IntroCtrl', function($scope, remote) {
             return (index == $scope.params.currentIndex);
         }
     };
-    $scope.messages = null;
 
-    // Get projects info
+    // Get messages
     remote.fetchSiteData('/data/intro.json').then(
         function (data) { // Success callback
             $scope.messages = data;

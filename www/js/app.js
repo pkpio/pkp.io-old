@@ -54,7 +54,6 @@ angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, c
             function (response) { // Success callback
                 deferred.resolve(response.data);
                 $rootScope.remoteCallInProgress = false;
-                console.log(response.data);
             },
             function (response) { //Error callback
                 console.log(response.toString());
