@@ -2,7 +2,7 @@
  * Created by praveen on 13.09.15.
  */
 
-angular.module('PraveenApp').controller('IntroCtrl', function($scope, $timeout, config, $http) {
+angular.module('PraveenApp').controller('IntroCtrl', function($scope, remote) {
     $scope.params = {
         typeDelay : 50,
         sentenceDelay : 500,
@@ -17,26 +17,11 @@ angular.module('PraveenApp').controller('IntroCtrl', function($scope, $timeout, 
         }
     };
     $scope.messages = null;
-    $scope.ready = 0;
 
     // Get projects info
-    $scope.loadData = function(){
-        var req = {
-            method: 'GET',
-            url: config.baseUrl + '/data/intro.json'
-        };
-        $http(req)
-            .then(
-            function (response) { // Success callback
-                $scope.messages = response.data;
-                $scope.ready = 1;
-            },
-            function (response) { //Error callback
-                console.log(response.toString());
-            }
-        );
-    };
-
-    // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, config.loadDelay);
+    remote.fetchSiteData('/data/intro.json').then(
+        function (data) { // Success callback
+            $scope.messages = data;
+        }
+    );
 });
