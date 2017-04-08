@@ -39,6 +39,39 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 }]);
 
+// Remote data fetching service
+angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, config) {
+    $rootScope.remoteCallInProgress = true;
+    var fetchData = function(url) {
+        $rootScope.remoteCallInProgress = true;
+        var req = {
+            method: 'GET',
+            url: url
+        };
+        var deferred = $q.defer();
+        $http(req)
+            .then(
+            function (response) { // Success callback
+                deferred.resolve(response.data);
+                $rootScope.remoteCallInProgress = false;
+                console.log(response.data);
+            },
+            function (response) { //Error callback
+                console.log(response.toString());
+                deferred.reject(response.toString());
+            }
+        );
+        return deferred.promise;
+    }
+    this.fetchSiteData = function(relativeUrl) {
+        return fetchData(config.baseUrl + relativeUrl);
+    }
+    this.fetchBlogDate = function(relativeUrl) {
+        return fetchData(config.blogUrl + relativeUrl);
+    }
+    return this;
+});
+
 // Route setup
 angular.module('PraveenApp').config(function($routeProvider, $locationProvider) {
     // use the HTML5 History API
