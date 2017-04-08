@@ -52,12 +52,14 @@
 
     <!-- Content -->
     <div layout="row" flex layout-wrap layout-align="center center" class="content-view">
-        <div flex layout="row" layout-align="center center" id="loading" ng-show="true">
+        <div flex layout="row" layout-align="center center" id="loading"
+                ng-show="$rootScope.remoteCallInProgress">
             <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
             <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
             <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
         </div>
-        <div flex="100" layout="row" layout-align="center center" ng-show="true">
+        <div flex="100" layout="row" layout-align="center center"
+                ng-show="!$rootScope.remoteCallInProgress">
             <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column"></div>
         </div>
     </div>
