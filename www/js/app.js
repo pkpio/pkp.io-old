@@ -41,9 +41,16 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
 
 // Remote data fetching service
 angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, config) {
-    $rootScope.remoteCallInProgress = true;
+    var observerCallbacks = [];
+    var callInProgress = true;
+    var notifyFetchProgressAs = function(progress){
+        callInProgress = progress;
+        angular.forEach(observerCallbacks, function(callback){
+            callback();
+        });
+    };
     var fetchData = function(url) {
-        $rootScope.remoteCallInProgress = true;
+        notifyFetchProgressAs(true);
         var req = {
             method: 'GET',
             url: url
@@ -53,7 +60,7 @@ angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, c
             .then(
             function (response) { // Success callback
                 deferred.resolve(response.data);
-                $rootScope.remoteCallInProgress = false;
+                notifyFetchProgressAs(false);
             },
             function (response) { //Error callback
                 console.log(response.toString());
@@ -61,14 +68,55 @@ angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, c
             }
         );
         return deferred.promise;
-    }
+    };
     this.fetchSiteData = function(relativeUrl) {
         return fetchData(config.baseUrl + relativeUrl);
     }
     this.fetchBlogDate = function(relativeUrl) {
         return fetchData(config.blogUrl + relativeUrl);
+    };
+    this.registerProgressObserver = function(callback){
+        observerCallbacks.push(callback);
+    };
+    this.isCallInProgress = function() {
+        return callInProgress;
     }
     return this;
+});
+
+// Main App controller
+angular.module('PraveenApp').controller('AppCtrl', function($scope, remote) {
+    var updateProgress = function(){
+        $scope.progress = remote.isCallInProgress();
+    };
+    remote.registerProgressObserver(updateProgress);
+    $scope.menuItems = [
+        {
+            class: "fa-user",
+            text: "About",
+            url: "/about"
+        },
+        {
+            class: "fa-graduation-cap",
+            text: "Academia",
+            url: "/academia"
+        },
+        {
+            class: "fa-user-secret",
+            text: "Work",
+            url: "/work"
+        },
+        {
+            class: "fa-code",
+            text: "Projects",
+            url: "/projects"
+        },
+        {
+            class: "fa-pencil",
+            text: "Blog",
+            url: "/blog"
+        }
+    ];
 });
 
 // Route setup
@@ -131,34 +179,4 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
             title       : 'Praveen\'s site - 404 not found!',  // This title is not taken by the routeProvider
             templateUrl : 'view/404.html'
         });
-});
-
-angular.module('PraveenApp').controller('AppCtrl', function($scope) {
-    $scope.menuItems = [
-        {
-            class: "fa-user",
-            text: "About",
-            url: "/about"
-        },
-        {
-            class: "fa-graduation-cap",
-            text: "Academia",
-            url: "/academia"
-        },
-        {
-            class: "fa-user-secret",
-            text: "Work",
-            url: "/work"
-        },
-        {
-            class: "fa-code",
-            text: "Projects",
-            url: "/projects"
-        },
-        {
-            class: "fa-pencil",
-            text: "Blog",
-            url: "/blog"
-        }
-    ];
 });
