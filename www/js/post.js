@@ -1,32 +1,14 @@
 /**
  * Created by praveen on 17.12.15.
  */
-angular.module('PraveenApp').controller('BlogPostCtrl', function($rootScope, $scope, $timeout, config, $http,
-                                                                 $routeParams, $sce) {
-    $scope.post = null;
-    $scope.ready = 0;
-
-    // Get posts list
-    $scope.loadData = function(){
-        var req = {
-            method: 'GET',
-            url: config.blogUrl + '/' + $routeParams.posturl + '/'
-        };
-        $http(req)
-            .then(
-                function (response) { // Success callback
-                    $scope.post = response.data;
-                    $scope.ready = 1;
-                    $rootScope.title = $scope.post.title;
-                },
-                function (response) { //Error callback
-                    console.log(response.toString());
-                }
-            );
-    };
-
-    // Delayed call to avoid navbar freeze on close
-    $timeout($scope.loadData, config.loadDelay);
+angular.module('PraveenApp').controller('BlogPostCtrl', function($rootScope, $scope, remote, $routeParams, $sce) {
+    // Get post data
+    remote.fetchBlogData('/' + $routeParams.posturl + '/').then(
+        function (data) {
+            $scope.post = data;
+            $rootScope.title = $scope.post.title;
+        }
+    );
 
     $scope.renderHtml = function (htmlCode) {
         return $sce.trustAsHtml(htmlCode);

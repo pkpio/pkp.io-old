@@ -1,12 +1,6 @@
-<div flex="100" layout="column" layout-align="center center" class="safari-height-fix">
-
-    <ng-include src="'view/loading.html'"></ng-include>
-
-
-    <div layout-align="center center" layout="column" class="pad-top content-wrapper-width safari-height-fix"
-         ng-show="ready">
-
-        <md-card class="max-width-parent safari-height-fix">
+<div layout="column" layout-align="center center" class="pad-top">
+    <div layout-align="center center" layout="column" class="content-wrapper-width">
+        <md-card class="max-width-parent">
             <div layout="column" layout-align="center center" class="title-block">
 
                 <!-- Title -->
@@ -59,7 +53,7 @@
                         disqus-shortname="pkpio"
                         disqus-identifier="{{ post.url }}"
                         disqus-url="http://pkp.io/blog{{ post.url }}"
-                        ready-to-bind="{{ ready }}" ng-show="showDiscuss" >
+                        ready-to-bind="{{ post }}" ng-show="showDiscuss" >
             </dir-disqus>
         </div>
 
