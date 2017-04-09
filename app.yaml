@@ -1,5 +1,5 @@
 application: pkp-io
-version: v1
+version: v2
 runtime: php55
 api_version: 1
 threadsafe: true
