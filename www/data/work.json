@@ -1,11 +1,19 @@
 [
   {
     "year" : "Now",
+    "icon" : "img/works/proemion.png",
+    "company" : "Proemion GmbH",
+    "site" : "https://www.proemion.com/",
+    "position" : "Software Developer",
+    "duration" : "February 2017 - Present"
+  },
+  {
+    "year" : "2017",
     "icon" : "img/works/cased.png",
     "company" : "Center for Advanced Security Research Darmstadt",
     "site" : "http://www.cased.de/",
     "position" : "Student Research Assistant",
-    "duration" : "November 2014 - Present"
+    "duration" : "November 2014 - January 2017"
   },
   {
     "year" : 2015,
