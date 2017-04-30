@@ -52,12 +52,15 @@
 
     <!-- Content -->
     <div layout="row" flex layout-wrap layout-align="center center" class="content-view">
-        <div flex="100" layout="row" layout-align="center center" id="loading" ng-show="progress">
+        <div flex="100" layout="row" layout-align="center center" id="loading" ng-show="progress == 1">
             <i class="fa fa-cog fa-spin" id="loading-cog1"></i>
             <i class="fa fa-cog fa-spin" id="loading-cog2"></i>
             <i class="fa fa-cog fa-spin" id="loading-cog3"></i>
         </div>
-        <div flex="100" layout="row" layout-align="center center" ng-show="!progress">
+        <md-card class="high-margin-top" ng-show="progress == -1" ng-cloak>
+            <img src="img/404-page.jpg" />
+        </md-card>
+        <div flex="100" layout="row" layout-align="center center" ng-show="progress == 0">
             <div ng-view flex="80" flex-md="90" flex-sm="95" layout="column"></div>
         </div>
     </div>
@@ -110,6 +113,7 @@
     <script src="js/work.js"></script>
     <script src="js/blog.js"></script>
     <script src="js/post.js"></script>
+    <script src="js/error.js"></script>
 
 </body>
 </html>

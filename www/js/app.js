@@ -41,15 +41,15 @@ angular.module('PraveenApp').config(['$httpProvider', function($httpProvider) {
 // Remote data fetching service
 angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, config) {
     var observerCallbacks = [];
-    var callInProgress = true;
-    var notifyFetchProgressAs = function(progress){
-        callInProgress = progress;
+    var progress = 0;
+    var notifyFetchProgressAs = function(prog){
+        progress = prog;
         angular.forEach(observerCallbacks, function(callback){
             callback();
         });
     };
     var fetchData = function(url) {
-        notifyFetchProgressAs(true);
+        notifyFetchProgressAs(1);
         var req = {
             method: 'GET',
             url: url
@@ -59,34 +59,35 @@ angular.module('PraveenApp').factory('remote', function($rootScope, $http, $q, c
             .then(
             function (response) { // Success callback
                 deferred.resolve(response.data);
-                notifyFetchProgressAs(false);
+                notifyFetchProgressAs(0);
             },
             function (response) { //Error callback
                 console.log(response.toString());
                 deferred.reject(response.toString());
+                notifyFetchProgressAs(-1);
             }
         );
         return deferred.promise;
     };
     this.fetchSiteData = function(relativeUrl) {
         return fetchData(config.baseUrl + relativeUrl);
-    }
+    };
     this.fetchBlogData = function(relativeUrl) {
         return fetchData(config.blogUrl + relativeUrl);
     };
     this.registerProgressObserver = function(callback){
         observerCallbacks.push(callback);
     };
-    this.isCallInProgress = function() {
-        return callInProgress;
-    }
+    this.getProgress = function() {
+        return progress;
+    };
     return this;
 });
 
 // Main App controller
 angular.module('PraveenApp').controller('AppCtrl', function($scope, remote) {
     var updateProgress = function(){
-        $scope.progress = remote.isCallInProgress();
+        $scope.progress = remote.getProgress();
     };
     remote.registerProgressObserver(updateProgress);
     $scope.menuItems = [
@@ -176,6 +177,7 @@ angular.module('PraveenApp').config(function($routeProvider, $locationProvider) 
         })
         .otherwise({
             title       : 'Praveen\'s site - 404 not found!',  // This title is not taken by the routeProvider
-            templateUrl : 'view/404.html'
+            templateUrl : 'view/404.html',
+            controller  : 'ErrorCtrl'
         });
 });
