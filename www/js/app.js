@@ -7,8 +7,8 @@ angular.module('PraveenApp', ['ngMaterial', 'ngRoute', 'angular-timeline', 'angu
 
 // Constants setup
 angular.module('PraveenApp').constant('config', {
-    baseUrl : 'http://pkp.io',      // Baseurl to load site resources
-    blogUrl : 'http://blog.pkp.io'  // Api url for blog
+    baseUrl : 'https://pkp.io',      // Baseurl to load site resources
+    blogUrl : 'https://blog.pkp.io'  // Api url for blog
 });
 
 // Theme setup
