@@ -1,11 +1,19 @@
 [
   {
     "year" : "Now",
+    "icon" : "http://dri1.img.digitalrivercontent.net/Storefront/Site/msusa/images/promo/en-US/msstore_400x400.jpg",
+    "company" : "Microsoft",
+    "site" : "https://www.microsoft.com/",
+    "position" : "Software Engineer",
+    "duration" : "June 2017 - Present"
+  },
+  {
+    "year" : "2017",
     "icon" : "img/works/proemion.png",
     "company" : "Proemion GmbH",
     "site" : "https://www.proemion.com/",
     "position" : "Software Developer",
-    "duration" : "February 2017 - Present"
+    "duration" : "February 2017 - May 2017"
   },
   {
     "year" : "2017",
